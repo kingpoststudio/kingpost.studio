@@ -158,33 +158,26 @@ h2 {
 }
 
 .site-brand__logo {
-  height: 3rem;
+  height: 2.4rem;
   width: auto;
-}
-
-.mark {
-  display: inline-flex;
-  align-items: stretch;
-  height: 1.85rem;
-  color: currentColor;
-  flex-shrink: 0;
-}
-
-.mark svg {
-  height: 100%;
-  width: auto;
-  fill: currentColor;
-  max-width: none;
 }
 
 .mark--spine {
   height: clamp(20rem, 68vh, 38rem);
-  color: var(--ink);
+  width: auto;
+  max-width: none;
+  flex-shrink: 0;
+  align-self: center;
 }
 
-.site-footer__avatar {
-  width: 1.5rem;
+.home-wordmark {
+  height: auto;
+  width: min(18rem, 100%);
+}
+
+.site-footer__mark {
   height: 1.5rem;
+  width: auto;
   flex-shrink: 0;
 }
 
