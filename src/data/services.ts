@@ -6,18 +6,26 @@ export interface Service {
 export const services: Service[] = [
   {
     name: 'Design',
-    description: 'Sites and systems that hold up past launch, not a template with a logo swap.',
+    description: 'How the company shows up, not a template with a logo swap.',
+  },
+  {
+    name: 'Strategy',
+    description: 'What the work has to do before anyone draws a page.',
+  },
+  {
+    name: 'UI/UX',
+    description: 'How people move through it, on the market and inside the company.',
   },
   {
     name: 'Development',
-    description: 'Themes, apps, and the libraries behind them.',
+    description: 'Built to last past launch.',
   },
   {
     name: 'Integrations',
-    description: 'CMS, CRM, and the tools around them, actually talking.',
+    description: 'The systems already in the business, connected instead of bolted on.',
   },
   {
-    name: 'Normalization',
-    description: 'One data model and one set of components, instead of a new one-off every time.',
+    name: 'Market optimization',
+    description: 'Tuned for how the company actually sells and is found.',
   },
 ];
