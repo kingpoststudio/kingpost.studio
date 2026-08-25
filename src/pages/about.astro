@@ -2,32 +2,30 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="About" description="Mission and about — King Post Studio.">
+<Base
+  title="About"
+  description="King Post Studio is a HubSpot CMS shop in Robbinsville, North Carolina."
+>
   <section class="stack">
-    <h1 class="page-title">About</h1>
-    <p class="page-intro muted">Mission / about — outline copy.</p>
-
+    <div class="page-head">
+      <h1>About</h1>
+      <div class="rule-double" aria-hidden="true"></div>
+    </div>
     <div class="prose">
-      <h2>Mission</h2>
+      <p>I run King Post Studio from Robbinsville, North Carolina.</p>
       <p>
-        Placeholder. King Post Studio builds bespoke web systems for organizations
-        that need durable marketing platforms, not throwaway pages.
+        HubSpot CMS themes and apps for teams that need a durable platform, not a throwaway page.
       </p>
-
-      <h2>What we do</h2>
+      <p>I left software in pharma to build this shop.</p>
       <p>
-        Outline focus areas for now: HubSpot CMS themes and modules, design-system
-        driven front ends, HubDB-powered tools, and small libraries that make delivery
-        repeatable.
-      </p>
-
-      <h2>How we work</h2>
-      <p>
-        Placeholder. Prefer clear structure, long-lived code, and tooling that keeps
-        client teams unblocked after launch.
+        I wrote the HubSpot developer post on{' '}
+        <a
+          href="https://developers.hubspot.com/blog/building-snappy-and-responsive-hubspot-themes-with-lit-and-vite"
+          rel="noreferrer"
+        >
+          Lit, Vite, and Storybook themes
+        </a>.
       </p>
     </div>
-
-    <div class="placeholder">Team / studio notes — TBD</div>
   </section>
 </Base>

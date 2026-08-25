@@ -1,0 +1,72 @@
+---
+import Base from '../layouts/Base.astro';
+import { clients, tools } from '../data/work.ts';
+---
+
+<Base
+  title="Work"
+  description="Selected HubSpot CMS work and studio tools from King Post Studio."
+>
+  <section class="stack stack--wide">
+    <div class="page-head">
+      <h1>Work</h1>
+      <div class="rule-double" aria-hidden="true"></div>
+    </div>
+
+    <div class="work-board">
+      <section class="work-col" aria-labelledby="clients-heading">
+        <h2 id="clients-heading">Clients</h2>
+        <ul class="work-list">
+          {
+            clients.map((entry) => (
+              <li>
+                {entry.href ? (
+                  <a class="work-list__name" href={entry.href} rel="noreferrer">
+                    {entry.name}
+                  </a>
+                ) : (
+                  <div class="work-list__name">{entry.name}</div>
+                )}
+                {entry.notes.length > 0 && (
+                  <div class="work-list__notes">
+                    {entry.notes.map((note, index) => (
+                      <>
+                        {index > 0 ? ', ' : ''}
+                        {note.href ? (
+                          <a href={note.href} rel="noreferrer">
+                            {note.label}
+                          </a>
+                        ) : (
+                          note.label
+                        )}
+                      </>
+                    ))}
+                  </div>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="work-col" aria-labelledby="tools-heading">
+        <h2 id="tools-heading">Tools</h2>
+        <ul class="work-list">
+          {
+            tools.map((entry) => (
+              <li>
+                {entry.href ? (
+                  <a class="work-list__name" href={entry.href} rel="noreferrer">
+                    {entry.name}
+                  </a>
+                ) : (
+                  <div class="work-list__name">{entry.name}</div>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+  </section>
+</Base>

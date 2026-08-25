@@ -1,17 +1,18 @@
 ---
+import Mark from '../components/Mark.astro';
 import '../styles/global.css';
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
 }
 
-const { title, description = 'King Post Studio — bespoke web solutions.' } = Astro.props;
+const { title, description } = Astro.props;
 const pageTitle = title === 'Home' ? 'King Post Studio' : `${title} — King Post Studio`;
 
 const nav = [
   { href: '/', label: 'Home' },
-  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/work', label: 'Work' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -29,10 +30,14 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
     <title>{pageTitle}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="site">
       <header class="site-header">
         <div class="site-header__inner">
-          <a class="site-brand" href="/">King Post Studio</a>
+          <a class="site-brand" href="/">
+            <Mark />
+            <span class="site-brand__name">King Post Studio</span>
+          </a>
           <nav aria-label="Primary">
             <ul class="site-nav">
               {
@@ -55,13 +60,14 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
         </div>
       </header>
 
-      <main class="site-main">
+      <main id="main" class="site-main">
         <slot />
       </main>
 
       <footer class="site-footer">
         <div class="site-footer__inner">
-          <p class="muted">King Post Studio</p>
+          <p>King Post Studio</p>
+          <p class="mono">Robbinsville, NC</p>
         </div>
       </footer>
     </div>
