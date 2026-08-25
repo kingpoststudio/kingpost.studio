@@ -264,6 +264,19 @@ h2 {
   font-size: 1.125rem;
 }
 
+.home .deck {
+  max-width: none;
+}
+
+.home__services {
+  margin-top: 0.35rem;
+}
+
+.home__services h2 {
+  padding-bottom: 0.85rem;
+  border-bottom: var(--hairline);
+}
+
 .place {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
