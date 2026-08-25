@@ -143,8 +143,8 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 1rem var(--space);
-  min-height: 4.6rem;
-  padding-block: 0.65rem;
+  min-height: 5.5rem;
+  padding-block: 0.55rem;
 }
 
 .site-brand {
@@ -158,7 +158,7 @@ h2 {
 }
 
 .site-brand__logo {
-  height: 2.4rem;
+  height: 4.25rem;
   width: auto;
 }
 
@@ -195,7 +195,7 @@ h2 {
   }
 
   .site-brand__logo {
-    height: 2.4rem;
+    height: 3.25rem;
   }
 }
 
