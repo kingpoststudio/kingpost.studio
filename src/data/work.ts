@@ -1,71 +1,73 @@
-export interface LinkedNote {
+export interface WorkLink {
   label: string;
-  href?: string;
+  href: string;
 }
 
 export interface WorkEntry {
   name: string;
-  notes: LinkedNote[];
+  description: string;
+  links?: WorkLink[];
   href?: string;
 }
 
 export const clients: WorkEntry[] = [
   {
     name: 'Pinhook Excavation',
-    notes: [{ label: 'pinhookexcavation.com', href: 'https://pinhookexcavation.com' }],
+    description: 'HubSpot CMS site for a western North Carolina excavation company.',
+    links: [{ label: 'pinhookexcavation.com', href: 'https://pinhookexcavation.com' }],
   },
   {
     name: 'IQVIA',
-    notes: [
-      { label: 'labs.iqvia.com', href: 'https://labs.iqvia.com' },
-      { label: 'IQVIAMaster/RBM' },
-    ],
+    description: 'HubSpot parent and child themes (IQVIAMaster, RBM) with shared UI.',
+    links: [{ label: 'labs.iqvia.com', href: 'https://labs.iqvia.com' }],
   },
   {
     name: 'Tosoh',
-    notes: [{ label: 'themes, microsites, HubDB search' }],
+    description: 'HubSpot themes, microsites, and HubDB search.',
   },
   {
     name: 'Biocat',
-    notes: [
+    description: 'HubSpot CMS e-commerce theme for Biocat GmbH.',
+    links: [
       { label: 'genes.biocat.com', href: 'https://genes.biocat.com' },
       { label: 'exosomes.biocat.com', href: 'https://exosomes.biocat.com' },
     ],
   },
   {
     name: 'Inotiv',
-    notes: [
-      { label: 'InotivTheme2023 for inotiv.com, not benefits', href: 'https://inotiv.com' },
-    ],
+    description: 'HubSpot theme (InotivTheme2023) for',
+    links: [{ label: 'inotiv.com', href: 'https://inotiv.com' }],
   },
   {
     name: 'Steroids and Me',
-    notes: [{ label: 'steroidsandme.com', href: 'https://steroidsandme.com' }],
+    description: 'HubSpot CMS and a React app.',
+    links: [{ label: 'steroidsandme.com', href: 'https://steroidsandme.com' }],
   },
   {
     name: 'AegisNS',
-    notes: [{ label: 'aegisns.com', href: 'https://aegisns.com' }],
+    description: 'HubSpot theme and a Remix marketing site.',
+    links: [{ label: 'aegisns.com', href: 'https://aegisns.com' }],
   },
 ];
 
 export const tools: WorkEntry[] = [
   {
     name: 'TrussUI',
-    notes: [],
+    description: 'Lit web components for HubSpot themes.',
   },
   {
     name: 'HubSpot Theme Starter',
-    notes: [],
+    description: 'Public Lit, Vite, and Storybook starter.',
     href: 'https://github.com/kingpoststudio/hubspot-theme-starter',
   },
   {
     name: 'hs-fieldkit',
-    notes: [],
+    description: 'TypeScript builders for HubSpot module fields.',
     href: 'https://www.npmjs.com/package/hs-fieldkit',
   },
   {
     name: 'vite-plugin-upload-to-hubspot',
-    notes: [],
+    description: 'Vite plugin that uploads a build to HubSpot.',
     href: 'https://github.com/kingpoststudio/vite-plugin-upload-to-hubspot',
   },
 ];

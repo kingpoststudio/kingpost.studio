@@ -27,22 +27,17 @@ import { clients, tools } from '../data/work.ts';
                 ) : (
                   <div class="work-list__name">{entry.name}</div>
                 )}
-                {entry.notes.length > 0 && (
-                  <div class="work-list__notes">
-                    {entry.notes.map((note, index) => (
-                      <>
-                        {index > 0 ? ', ' : ''}
-                        {note.href ? (
-                          <a href={note.href} rel="noreferrer">
-                            {note.label}
-                          </a>
-                        ) : (
-                          note.label
-                        )}
-                      </>
-                    ))}
-                  </div>
-                )}
+                <div class="work-list__notes">
+                  {entry.description}
+                  {entry.links?.map((link, index) => (
+                    <>
+                      {index === 0 ? ' ' : ', '}
+                      <a href={link.href} rel="noreferrer">
+                        {link.label}
+                      </a>
+                    </>
+                  ))}
+                </div>
               </li>
             ))
           }
@@ -62,6 +57,7 @@ import { clients, tools } from '../data/work.ts';
                 ) : (
                   <div class="work-list__name">{entry.name}</div>
                 )}
+                <div class="work-list__notes">{entry.description}</div>
               </li>
             ))
           }
