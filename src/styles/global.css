@@ -39,7 +39,7 @@ body {
   font-family: var(--font-sans);
   font-size: 1.0625rem;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.45;
   color: var(--ink-70);
   background: var(--paper);
 }
@@ -170,11 +170,6 @@ h2 {
   align-self: center;
 }
 
-.home-wordmark {
-  height: auto;
-  width: min(18rem, 100%);
-}
-
 .site-footer__mark {
   height: 1.5rem;
   width: auto;
@@ -257,7 +252,7 @@ h2 {
 .stack {
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 0.95rem;
   max-width: var(--max);
 }
 
@@ -441,11 +436,6 @@ a.work-list__name {
   opacity: 0.15;
   transform: rotate(45deg);
   flex-shrink: 0;
-}
-
-.work-list li:hover .service-mark {
-  background: var(--green);
-  opacity: 1;
 }
 
 .work-list__notes {
