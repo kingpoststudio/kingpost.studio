@@ -2,7 +2,7 @@
 
 Static site for King Post Studio.
 
-Astro 5, TypeScript, IBM Plex via Fontsource, one global CSS file. No UI islands.
+Astro 5, TypeScript, Pirata One for headings and Manrope for body/UI (brandbook stand-in for Proxima Nova), one global CSS file. No UI islands.
 
 ## Routes
 

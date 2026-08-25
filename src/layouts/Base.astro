@@ -1,5 +1,4 @@
 ---
-import Mark from '../components/Mark.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -34,9 +33,14 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
     <div class="site">
       <header class="site-header">
         <div class="site-header__inner">
-          <a class="site-brand" href="/">
-            <Mark />
-            <span class="site-brand__name">King Post Studio</span>
+          <a class="site-brand" href="/" aria-label="King Post Studio">
+            <img
+              class="site-brand__logo"
+              src="/brand/kps-logo-landscape-black.svg"
+              alt="King Post Studio"
+              width="227"
+              height="72"
+            />
           </a>
           <nav aria-label="Primary">
             <ul class="site-nav">
@@ -66,8 +70,17 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 
       <footer class="site-footer">
         <div class="site-footer__inner">
-          <p>King Post Studio</p>
-          <p class="mono">Robbinsville, NC</p>
+          <p class="site-footer__brand">
+            <img
+              class="site-footer__avatar"
+              src="/brand/kps-alt-icon.svg"
+              alt=""
+              width="32"
+              height="32"
+            />
+            <span>King Post Studio</span>
+          </p>
+          <p class="place">Robbinsville, NC</p>
         </div>
       </footer>
     </div>

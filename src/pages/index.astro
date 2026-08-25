@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import Mark from '../components/Mark.astro';
+import KpsIcon from '../components/KpsIcon.astro';
 import { services } from '../data/services.ts';
 ---
 
@@ -9,7 +9,7 @@ import { services } from '../data/services.ts';
   description="King Post Studio. For CEOs, CTOs, and CMOs who want one studio from the first conversation through launch."
 >
   <section class="home">
-    <Mark class="mark--spine" />
+    <KpsIcon class="mark--spine" />
     <div class="home__copy stack">
       <h1>King Post Studio</h1>
       <p class="headline">Bespoke Web Solutions</p>
@@ -23,7 +23,10 @@ import { services } from '../data/services.ts';
           {
             services.map((item) => (
               <li>
-                <div class="work-list__name">{item.name}</div>
+                <div class="work-list__name">
+                  <span class="service-mark" aria-hidden="true"></span>
+                  {item.name}
+                </div>
                 <div class="work-list__notes">{item.description}</div>
               </li>
             ))
