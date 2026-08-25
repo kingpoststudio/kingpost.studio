@@ -1,19 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
+import Mark from '../components/Mark.astro';
 ---
 
 <Base
   title="Home"
   description="King Post Studio. Bespoke web solutions. Themes, modules, and the libraries behind them. Robbinsville, NC."
 >
-  <section class="stack">
-    <h1>King Post Studio</h1>
-    <p class="headline">Bespoke Web Solutions</p>
-    <p class="deck">Themes, modules, and the libraries behind them.</p>
-    <p class="place">Robbinsville, NC</p>
-    <div class="cta-row">
-      <a class="cta" href="/contact">Talk about a HubSpot build</a>
-      <a class="link-quiet" href="/work">Work</a>
+  <section class="home">
+    <Mark class="mark--spine" />
+    <div class="home__copy stack">
+      <h1>King Post Studio</h1>
+      <p class="headline">Bespoke Web Solutions</p>
+      <p class="deck">Themes, modules, and the libraries behind them.</p>
+      <p class="place">Robbinsville, NC</p>
+      <div class="cta-row">
+        <a class="cta" href="/contact">Talk about a HubSpot build</a>
+        <a class="link-quiet" href="/work">Work</a>
+      </div>
     </div>
   </section>
 </Base>
