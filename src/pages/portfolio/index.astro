@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const projects = (await getCollection('portfolio', ({ data }) => !data.draft)).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title),
+);
+---
+
+<Base title="Portfolio" description="Selected work — King Post Studio.">
+  <section class="stack stack--wide">
+    <h1 class="page-title">Portfolio</h1>
+    <p class="page-intro muted">Selected work and studio tools. Placeholder listings.</p>
+
+    <ul class="list">
+      {
+        projects.map((project) => (
+          <li>
+            <a href={`/portfolio/${project.id}`}>
+              <div class="list__title">{project.data.title}</div>
+              <div class="list__meta">
+                {[project.data.client, project.data.year].filter(Boolean).join(' · ')}
+                {project.data.summary ? ` — ${project.data.summary}` : ''}
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>

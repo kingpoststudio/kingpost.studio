@@ -1,0 +1,69 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'King Post Studio — bespoke web solutions.' } = Astro.props;
+const pageTitle = title === 'Home' ? 'King Post Studio' : `${title} — King Post Studio`;
+
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="site">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="site-brand" href="/">King Post Studio</a>
+          <nav aria-label="Primary">
+            <ul class="site-nav">
+              {
+                nav.map((item) => {
+                  const current =
+                    item.href === '/'
+                      ? pathname === '/'
+                      : pathname === item.href || pathname.startsWith(`${item.href}/`);
+                  return (
+                    <li>
+                      <a href={item.href} aria-current={current ? 'page' : undefined}>
+                        {item.label}
+                      </a>
+                    </li>
+                  );
+                })
+              }
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="site-main">
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <p class="muted">King Post Studio</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

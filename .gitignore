@@ -1,0 +1,15 @@
+# build
+dist/
+.astro/
+
+# deps
+node_modules/
+
+# env
+.env
+.env.*
+
+# editor / os
+.DS_Store
+*.log
+.vercel
