@@ -7,13 +7,13 @@ import { clients, tools } from '../data/work.ts';
   <section class="stack stack--wide">
     <div class="page-head">
       <h1>Work</h1>
+      <p class="hud-label">WORK</p>
       <p class="deck">Client sites and the tools behind them.</p>
-      <div class="rule-double" aria-hidden="true"></div>
     </div>
 
     <div class="work-board">
-      <section class="work-col" aria-labelledby="clients-heading">
-        <h2 id="clients-heading">Clients</h2>
+      <section class="work-col hud-box" aria-labelledby="clients-heading">
+        <h2 class="hud-label" id="clients-heading">CLIENTS</h2>
         <ul class="work-list">
           {
             clients.map((entry) => (
@@ -42,8 +42,8 @@ import { clients, tools } from '../data/work.ts';
         </ul>
       </section>
 
-      <section class="work-col" aria-labelledby="tools-heading">
-        <h2 id="tools-heading">Tools</h2>
+      <section class="work-col hud-box" aria-labelledby="tools-heading">
+        <h2 class="hud-label" id="tools-heading">TOOLS</h2>
         <ul class="work-list">
           {
             tools.map((entry) => (

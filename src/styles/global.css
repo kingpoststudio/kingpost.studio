@@ -36,6 +36,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  padding: 22px;
   font-family: var(--font-sans);
   font-size: 1.0625rem;
   font-weight: 400;
@@ -102,11 +103,10 @@ h2 {
   position: absolute;
   left: var(--gutter);
   top: 0.75rem;
-  z-index: 20;
+  z-index: 40;
   padding: 0.4rem 0.7rem;
-  background: var(--paper);
-  border: var(--hairline);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   text-decoration: none;
   transform: translateY(-150%);
 }
@@ -114,18 +114,122 @@ h2 {
 .skip-link:focus,
 .skip-link:focus-visible {
   transform: none;
-  color: var(--ink);
+  color: var(--paper);
+  outline-color: var(--paper);
+}
+
+/* Viewport HUD chrome — NieR pause-menu feel, CSS only */
+.hud-rail {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 24;
+  height: 7px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    var(--ink) 0,
+    var(--ink) 1px,
+    transparent 1px,
+    transparent 6px,
+    var(--ink) 6px,
+    var(--ink) 7px
+  );
+}
+
+.hud-rail--top {
+  top: 10px;
+}
+
+.hud-rail--bottom {
+  bottom: 10px;
+}
+
+.hud-frame {
+  position: fixed;
+  inset: 18px;
+  z-index: 23;
+  pointer-events: none;
+  border: 1px solid var(--ink);
+}
+
+.hud-tick {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+}
+
+.hud-tick--tl {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.hud-tick--tr {
+  top: -1px;
+  right: -1px;
+  border-top: 1px solid var(--ink);
+  border-right: 1px solid var(--ink);
+}
+
+.hud-tick--bl {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.hud-tick--br {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1px solid var(--ink);
+  border-right: 1px solid var(--ink);
+}
+
+.hud-grid,
+.hud-grain,
+.hud-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hud-grid {
+  z-index: 21;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--ink) 4%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--ink) 4%, transparent) 1px, transparent 1px);
+  background-size: 8px 8px;
+  opacity: 0.55;
+}
+
+.hud-grain {
+  z-index: 22;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='80' height='80' filter='url(%23n)' opacity='0.9'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+.hud-vignette {
+  z-index: 20;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 58%,
+    color-mix(in srgb, var(--ink) 14%, transparent) 100%
+  );
 }
 
 .site {
-  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 44px);
   display: flex;
   flex-direction: column;
 }
 
 .site-header {
   border-bottom: var(--hairline);
-  box-shadow: inset 0 3px 0 var(--purple);
 }
 
 .site-header__inner,
@@ -169,10 +273,18 @@ h2 {
 }
 
 .home {
-  min-height: calc(100svh - 9rem);
+  min-height: calc(100svh - 11rem);
 }
 
 @media (max-width: 640px) {
+  body {
+    padding: 14px;
+  }
+
+  .site {
+    min-height: calc(100vh - 28px);
+  }
+
   .home {
     min-height: 0;
   }
@@ -180,35 +292,58 @@ h2 {
   .site-brand__logo {
     height: 2.15rem;
   }
+
+  .hud-frame {
+    inset: 12px;
+  }
+
+  .hud-rail--top {
+    top: 6px;
+  }
+
+  .hud-rail--bottom {
+    bottom: 6px;
+  }
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem 1.35rem;
+  gap: 0.2rem 0.35rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
 .site-nav a {
   color: var(--purple);
   text-decoration: none;
+  padding: 0.28rem 0.5rem;
 }
 
-.site-nav a:hover,
-.site-nav a[aria-current='page'] {
+.site-nav a:hover {
   color: var(--purple);
-  box-shadow: inset 0 -2px 0 var(--purple);
+}
+
+.site-nav a[aria-current='page'] {
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: none;
+}
+
+.site-nav a[aria-current='page']:hover {
+  color: var(--paper);
 }
 
 .site-main {
   flex: 1;
-  padding-block: clamp(2.25rem, 6vw, 4.5rem);
+  padding-block: clamp(1.5rem, 4vw, 2.75rem);
+  border: 1px solid var(--ink);
 }
 
 .site-footer {
@@ -244,11 +379,12 @@ h2 {
 }
 
 .headline {
-  font-family: var(--font-display);
-  font-size: clamp(1.65rem, 3.6vw, 2.35rem);
+  font-family: var(--font-sans);
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
   font-weight: 400;
-  line-height: 1.15;
-  color: var(--red);
+  letter-spacing: 0.01em;
+  line-height: 1.22;
+  color: var(--ink);
 }
 
 .deck {
@@ -261,13 +397,56 @@ h2 {
   max-width: none;
 }
 
-.home__services {
-  margin-top: 0.35rem;
+.hud-label {
+  display: inline-block;
+  width: fit-content;
+  margin: 0;
+  padding: 0.28rem 0.7rem 0.26rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  border: 0;
 }
 
-.home__services h2 {
-  padding-bottom: 0.85rem;
-  border-bottom: var(--rule-accent);
+.hud-box {
+  position: relative;
+  margin-top: 0.15rem;
+  padding: 0.95rem 1rem 0.85rem;
+  border: 1px solid var(--ink);
+}
+
+.hud-box::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--ink), var(--ink)) 0 0 / 8px 1px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 0 0 / 1px 8px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 100% 0 / 8px 1px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 100% 0 / 1px 8px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 0 100% / 8px 1px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 0 100% / 1px 8px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 100% 100% / 8px 1px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 100% 100% / 1px 8px no-repeat;
+}
+
+.hud-box .hud-label {
+  margin-bottom: 0.7rem;
+}
+
+.hud-box .work-list li:last-child,
+.contact-list.hud-box li:last-child {
+  border-bottom: 0;
+}
+
+.home__services {
+  margin-top: 0.35rem;
 }
 
 .cta-row {
@@ -284,16 +463,18 @@ h2 {
   text-decoration: none;
   border: 1px solid var(--red);
   padding: 0.6rem 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.78rem;
 }
 
 .cta:hover {
-  background: var(--ink);
-  border-color: var(--ink);
+  background: var(--red);
+  border-color: var(--red);
   color: var(--paper);
+  filter: brightness(0.94);
 }
 
 .link-quiet {
@@ -309,13 +490,6 @@ h2 {
 .link-quiet:hover {
   color: var(--purple);
   border-bottom-width: 2px;
-}
-
-.rule-double {
-  height: 0.4rem;
-  border-top: var(--rule-accent);
-  border-bottom: 1px solid var(--red);
-  max-width: var(--wide);
 }
 
 .prose {
@@ -336,14 +510,17 @@ h2 {
   padding: 0;
   display: flex;
   flex-direction: column;
-  border-top: var(--hairline);
+}
+
+.contact-list.hud-box {
+  padding: 0;
 }
 
 .contact-list li {
   display: grid;
   grid-template-columns: 6.5rem 1fr;
   gap: 0.75rem;
-  padding: 0.85rem 0;
+  padding: 0.85rem 1rem;
   border-bottom: var(--hairline);
 }
 
@@ -358,30 +535,20 @@ h2 {
 .work-board {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 1rem;
   margin-top: 0.25rem;
 }
 
 @media (min-width: 720px) {
   .work-board {
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-  }
-
-  .work-col + .work-col {
-    border-left: var(--hairline);
-    padding-left: 2rem;
-  }
-
-  .work-col:first-child {
-    padding-right: 2rem;
+    gap: 1rem;
   }
 }
 
-.work-col h2 {
-  padding-bottom: 0.85rem;
-  border-bottom: var(--rule-accent);
-  margin-bottom: 0;
+.work-col.hud-box {
+  padding: 0.85rem 0.9rem 0.75rem;
+  margin-top: 0;
 }
 
 .work-list {
@@ -435,10 +602,7 @@ a.work-list__name {
 .page-head {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.page-head .rule-double {
-  width: 100%;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 0.5rem;
 }
