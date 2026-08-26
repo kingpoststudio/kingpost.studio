@@ -384,7 +384,7 @@ h2 {
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.22;
-  color: var(--ink);
+  color: var(--ink-70);
 }
 
 .deck {
