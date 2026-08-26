@@ -7,41 +7,32 @@ import { services } from '../data/services.ts';
   title="Home"
   description="King Post Studio. For CEOs, CTOs, and CMOs who want one studio from the first conversation through launch."
 >
-  <section class="home">
-    <img
-      class="mark--spine"
-      src="/brand/kps-spine.svg"
-      alt=""
-      width="390"
-      height="340"
-    />
-    <div class="home__copy stack">
-      <h1>King Post Studio</h1>
-      <p class="headline">Bespoke Web Solutions</p>
-      <p class="deck">
-        For CEOs, CTOs, and CMOs who want one studio from the first conversation through launch.
-        Clear process. No handoff between shops.
-      </p>
-      <section class="home__services" aria-labelledby="services-heading">
-        <h2 id="services-heading">Services</h2>
-        <ul class="work-list">
-          {
-            services.map((item) => (
-              <li>
-                <div class="work-list__name">
-                  <span class="service-mark" aria-hidden="true"></span>
-                  {item.name}
-                </div>
-                <div class="work-list__notes">{item.description}</div>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-      <div class="cta-row">
-        <a class="cta" href="/contact">Talk about a project</a>
-        <a class="link-quiet" href="/work">Work</a>
-      </div>
+  <section class="home stack">
+    <h1>King Post Studio</h1>
+    <p class="headline">Bespoke Web Solutions</p>
+    <p class="deck">
+      For CEOs, CTOs, and CMOs who want one studio from the first conversation through launch.
+      Clear process. No handoff between shops.
+    </p>
+    <section class="home__services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Services</h2>
+      <ul class="work-list">
+        {
+          services.map((item) => (
+            <li>
+              <div class="work-list__name">
+                <span class="service-mark" aria-hidden="true"></span>
+                {item.name}
+              </div>
+              <div class="work-list__notes">{item.description}</div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <div class="cta-row">
+      <a class="cta" href="/contact">Talk about a project</a>
+      <a class="link-quiet" href="/work">Work</a>
     </div>
   </section>
 </Base>

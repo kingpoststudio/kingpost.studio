@@ -143,8 +143,8 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 1rem var(--space);
-  min-height: 5.5rem;
-  padding-block: 0.55rem;
+  min-height: 4.6rem;
+  padding-block: 0.65rem;
 }
 
 .site-brand {
@@ -158,16 +158,8 @@ h2 {
 }
 
 .site-brand__logo {
-  height: 4.25rem;
+  height: 2.4rem;
   width: auto;
-}
-
-.mark--spine {
-  height: clamp(20rem, 68vh, 38rem);
-  width: auto;
-  max-width: none;
-  flex-shrink: 0;
-  align-self: center;
 }
 
 .site-footer__mark {
@@ -177,25 +169,16 @@ h2 {
 }
 
 .home {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(1.5rem, 4vw, 3.5rem);
-  align-items: center;
   min-height: calc(100svh - 9rem);
 }
 
 @media (max-width: 640px) {
   .home {
     min-height: 0;
-    gap: 1.25rem;
-  }
-
-  .mark--spine {
-    height: clamp(12rem, 48vh, 18rem);
   }
 
   .site-brand__logo {
-    height: 3.25rem;
+    height: 2.15rem;
   }
 }
 
