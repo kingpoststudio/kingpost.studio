@@ -193,13 +193,19 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 1rem var(--space);
-  min-height: 4.6rem;
-  padding-block: 0.65rem;
+  padding-block: 0.85rem;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
 }
 
 .site-brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  height: 0.72rem;
+  overflow: hidden;
   text-decoration: none;
 }
 
@@ -208,8 +214,11 @@ h2 {
 }
 
 .site-brand__logo {
-  height: 2.4rem;
+  display: block;
+  height: 1.08rem;
   width: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 .site-footer__mark {
@@ -226,15 +235,12 @@ h2 {
   .home {
     min-height: 0;
   }
-
-  .site-brand__logo {
-    height: 2.15rem;
-  }
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.2rem 0.35rem;
   list-style: none;
   margin: 0;
@@ -243,10 +249,13 @@ h2 {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.16em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 .site-nav a {
+  display: inline-flex;
+  align-items: center;
   color: var(--purple);
   text-decoration: none;
   padding: 0.28rem 0.5rem;
