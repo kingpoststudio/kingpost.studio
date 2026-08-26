@@ -117,32 +117,6 @@ h2 {
   outline-color: var(--paper);
 }
 
-.hud-rail {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 24;
-  height: 7px;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    var(--ink) 0,
-    var(--ink) 1px,
-    transparent 1px,
-    transparent 6px,
-    var(--ink) 6px,
-    var(--ink) 7px
-  );
-}
-
-.hud-rail--top {
-  top: 0;
-}
-
-.hud-rail--bottom {
-  bottom: 0;
-}
-
 .hud-grain,
 .hud-vignette {
   position: fixed;
