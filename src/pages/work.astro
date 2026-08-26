@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import { clients, tools } from '../data/work.ts';
+---
+
+<Base title="Work" description="Client sites and the tools behind them. King Post Studio.">
+  <section class="stack stack--wide">
+    <div class="page-head">
+      <h1>Work</h1>
+      <p class="hud-label">WORK</p>
+      <p class="deck">Client sites and the tools behind them.</p>
+    </div>
+
+    <div class="work-board">
+      <section class="work-col hud-box" aria-labelledby="clients-heading">
+        <h2 class="hud-label" id="clients-heading">CLIENTS</h2>
+        <ul class="work-list">
+          {
+            clients.map((entry) => (
+              <li>
+                {entry.href ? (
+                  <a class="work-list__name" href={entry.href} rel="noreferrer">
+                    {entry.name}
+                  </a>
+                ) : (
+                  <div class="work-list__name">{entry.name}</div>
+                )}
+                <div class="work-list__notes">
+                  {entry.description}
+                  {entry.links?.map((link, index) => (
+                    <>
+                      {index === 0 ? ' ' : ', '}
+                      <a href={link.href} rel="noreferrer">
+                        {link.label}
+                      </a>
+                    </>
+                  ))}
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="work-col hud-box" aria-labelledby="tools-heading">
+        <h2 class="hud-label" id="tools-heading">TOOLS</h2>
+        <ul class="work-list">
+          {
+            tools.map((entry) => (
+              <li>
+                {entry.href ? (
+                  <a class="work-list__name" href={entry.href} rel="noreferrer">
+                    {entry.name}
+                  </a>
+                ) : (
+                  <div class="work-list__name">{entry.name}</div>
+                )}
+                <div class="work-list__notes">{entry.description}</div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+  </section>
+</Base>
