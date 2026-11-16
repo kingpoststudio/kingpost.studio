@@ -28,3 +28,8 @@ bun run preview
 ```
 
 Output is static (`dist/`).
+
+## Docs
+
+Razor Profiles standing context — the dossier, decisions, and Rio's design proposals — lives in [`docs/razor-profiles/`](docs/razor-profiles/) on this branch. It is not part of the site build.
+

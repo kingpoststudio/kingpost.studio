@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Inter:wght@400;500&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<link rel="stylesheet" href="base.css"><script src="mob.js"></script><style>
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin-top:48px}
+.tab{padding:20px 0 18px;display:flex;gap:16px;align-items:baseline;border-right:1px solid var(--rule);padding-left:20px;position:relative}
+.tab:first-child{padding-left:0}
+.tab .t{font-family:'Inter Tight';font-size:22px;font-weight:500;color:var(--mute)}
+.tab.on .t{color:var(--ink)}
+.tab.on:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--ink)}
+.tab.on .sq{width:8px;height:8px;background:var(--yel);outline:1px solid var(--ink);display:inline-block;margin-left:auto;margin-right:20px}
+</style></head><body><div class="sheet">
+<div class="spec mono"><span><b>Razor Profiles</b> · Direction A — Cross-Section</span><span class="r">Module 01 / 10 — <b>Tabs</b></span></div>
+<div class="wrap"><div class="cols"></div>
+<span class="tk" style="left:40px;top:28px"></span><span class="tk" style="right:40px;top:28px"></span><span class="tk" style="left:40px;bottom:28px"></span><span class="tk" style="right:40px;bottom:28px"></span>
+
+<div class="g"><div style="grid-column:1/8"><div class="lab mono">02 — Capabilities</div><h2>Four disciplines, <span>one surface.</span></h2></div>
+<div style="grid-column:9/13;align-self:end"><p class="small">Select a discipline to see what it covers and how it connects to the other three.</p></div></div>
+<div class="tabs" role="tablist">
+<div class="tab on"><span class="mono" style="color:var(--deep)">01</span><span class="t">Strategy</span><span class="sq"></span></div>
+<div class="tab"><span class="mono" style="color:var(--mute2)">02</span><span class="t">Marketing</span></div>
+<div class="tab"><span class="mono" style="color:var(--mute2)">03</span><span class="t">Design</span></div>
+<div class="tab"><span class="mono" style="color:var(--mute2)">04</span><span class="t">Development</span></div></div>
+<div class="g" style="margin-top:48px">
+<div style="grid-column:1/6">
+<div class="mono" style="color:var(--mute);margin-bottom:14px">Panel 01 / 04 — Strategy</div>
+<h3 style="font-size:30px;line-height:1.15">Define the challenge before anyone draws a page.</h3>
+<p style="margin-top:18px">Digital strategy and account-based planning, built around the business problem rather than the channel.</p>
+<div class="rule-top" style="margin-top:28px">
+<div class="row" style="grid-template-columns:52px 1fr"><span class="mono" style="color:var(--mute2)">A</span><span>Identify the business challenge(s)</span></div>
+<div class="row" style="grid-template-columns:52px 1fr"><span class="mono" style="color:var(--mute2)">B</span><span>Prioritize by benefit to the organization and cost</span></div>
+<div class="row" style="grid-template-columns:52px 1fr"><span class="mono" style="color:var(--mute2)">C</span><span>Agree an implementation plan</span></div>
+<div class="row" style="grid-template-columns:52px 1fr"><span class="mono" style="color:var(--mute2)">D</span><span>Account-based marketing strategy</span></div></div>
+<div style="margin-top:30px;display:flex;gap:28px;align-items:center"><a class="btn b1"><i></i>Talk to Walter</a><a class="tl">Strategy in detail →</a></div>
+</div>
+<div style="grid-column:7/13"><div class="frame" style="height:470px;border-color:var(--rule)"><svg id="m" width="100%" height="470" viewBox="0 0 648 470"></svg>
+<span class="mono" style="position:absolute;right:16px;top:14px;color:var(--mute)">Section B-B</span></div>
+<div class="cap mono"><span>Fig. 02 — Strategy quarter of the surface</span><span>Scale 1:1</span></div></div></div>
+</div></div><script>mob(document.getElementById('m'),{R:190,W:64,cx:324,cy:240,hi:[.06,.31],mark:{u:.19,off:22,t:'01 STRATEGY'}});
+document.fonts.ready.then(()=>{document.title='H'+document.documentElement.scrollHeight;});</script></body></html>

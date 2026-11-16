@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8"><title></title><style>
+@font-face{font-family:Bricolage;src:url(../fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf);font-weight:200 800;font-stretch:75% 100%}
+@font-face{font-family:Instrument;src:url(../fonts/InstrumentSans-VariableFont_wdth,wght.ttf);font-weight:400 700;font-stretch:75% 100%}
+@font-face{font-family:Instrument;src:url(../fonts/InstrumentSans-Italic-VariableFont_wdth,wght.ttf);font-style:italic;font-weight:400 700}
+:root{--white:#F7F9FC;--frost:#E4EBF4;--ink:#0E1A33;--navy:#003271;--sky:#28ABE2;--yel:#D6DF27;--slate:#4A5872;--line:#C9D4E3;--cut:28px}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;background:var(--white);color:var(--ink);font-family:Instrument,sans-serif;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.d{font-family:Bricolage;font-stretch:78%;font-weight:700;letter-spacing:-.025em;line-height:.94;font-variation-settings:"opsz" 96}
+.eyebrow{font-family:Bricolage;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-stretch:90%;display:flex;align-items:center;gap:12px;color:var(--navy)}
+.eyebrow:before{content:"";width:14px;height:14px;background:var(--sky);clip-path:polygon(0 0,55% 0,100% 45%,100% 100%,0 100%)}
+.wrap{padding:0 96px}
+.cut{clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,0 100%)}
+.btn{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 30px 0 26px;font-weight:600;font-size:16px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
+.btn.p{background:var(--navy);color:#fff}
+.btn.y{background:var(--yel);color:var(--ink)}
+.btn.s{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy);clip-path:none}
+.btn .ar{font-family:Bricolage;font-size:20px;line-height:1}
+.tl{font-weight:600;color:var(--navy);border-bottom:2px solid var(--sky);padding-bottom:2px}
+header.top{height:84px;display:flex;align-items:center;padding:0 96px;background:var(--white);border-bottom:1px solid var(--line)}
+header.top nav{display:flex;align-items:center;height:84px;gap:34px;margin-left:auto;margin-right:36px;font-weight:500;font-size:15px}
+header.top nav a{height:84px;display:flex;align-items:center}header.top nav a.on{color:var(--navy);box-shadow:inset 0 -3px 0 var(--sky)}
+.crumb{height:52px;display:flex;align-items:center;padding:0 96px;font-size:13px;color:var(--slate);border-bottom:1px solid var(--line);gap:10px}
+.crumb b{color:var(--ink);font-weight:600}.crumb .r{margin-left:auto;display:flex;gap:22px}
+.crumb .r span:before{content:"";display:inline-block;width:7px;height:7px;background:var(--sky);margin-right:8px;vertical-align:1px}
+h2.d{font-size:76px}
+h3{font-family:Bricolage;font-stretch:85%;font-weight:650;font-size:28px;letter-spacing:-.015em;line-height:1.05}
+.lead{font-size:20px;line-height:1.5;color:#26324d}
+.mut{color:var(--slate)}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:6px 12px 6px 10px;background:var(--frost);color:var(--navy)}
+.chip i{width:9px;height:9px;display:block;clip-path:polygon(0 0,55% 0,100% 45%,100% 100%,0 100%)}
+.ph{border:2px dashed #8EA0BD;color:var(--slate);display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:600;letter-spacing:.04em}
+.spec{height:48px;display:flex;align-items:center;padding:0 96px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);border-bottom:1px solid var(--line);font-family:Bricolage;font-stretch:90%}
+.spec .r{margin-left:auto;color:var(--ink)}
+.m{padding:88px 96px 96px;position:relative}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+
+.cs{display:grid;grid-template-columns:1.05fr 1fr;gap:20px}
+.cs .l{background:var(--navy);padding:56px;--cut:64px;min-height:640px;display:flex;flex-direction:column}
+.cs .l .eyebrow:before{background:var(--yel)}
+.tags{display:flex;gap:10px;margin-top:auto;flex-wrap:wrap}
+.tags span{font-size:13px;font-weight:600;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4);padding:7px 12px}
+.cs .r{display:flex;flex-direction:column;gap:20px}
+.mt{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.metric{background:var(--sky);padding:26px 22px;min-height:220px;display:flex;flex-direction:column;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%)}
+.metric b{white-space:nowrap;font-family:Bricolage;font-stretch:78%;font-size:64px;font-weight:700;line-height:1;letter-spacing:-.03em}
+.metric span{font-weight:600;margin-top:auto}.metric em{font-style:normal;font-size:12px;opacity:.8}
+blockquote{background:#fff;padding:34px;font-family:Bricolage;font-stretch:85%;font-size:28px;line-height:1.2;font-weight:600;border-left:6px solid var(--yel)}
+cite{display:block;font-family:Instrument;font-style:normal;font-size:13px;color:var(--slate);font-weight:500;margin-top:16px}
+.spec2{display:grid;grid-template-columns:repeat(3,1fr);background:var(--frost)}
+.spec2 div{padding:20px 22px;font-weight:600;font-size:15px;border-right:1px solid #fff}
+.spec2 small{display:block;font-family:Bricolage;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-bottom:6px}</style></head><body style="background:var(--white)"><div class="spec">Razor Profiles · Direction 1 — Clean Cut<span class="r">Module 05 / 10 — Case study</span></div><section class="m"><div class="cs">
+<div class="l cut"><div class="eyebrow" style="color:var(--yel)">Case study · E-commerce</div>
+<h2 class="d" style="font-size:72px;color:#fff;margin-top:22px">Blip: commerce wired into the CRM.</h2>
+<p style="color:#C9D6EC;font-size:18px;margin-top:20px">A complex e-commerce integration, so orders, customers and marketing live in one system instead of three.</p>
+<div class="tags"><span>HubSpot theme</span><span>E-commerce integration</span><span>Backend systems</span></div>
+<a class="btn y" style="margin-top:40px;align-self:flex-start">Read the case <span class="ar">→</span></a></div>
+<div class="r"><div class="mt"><div class="metric"><b>—%</b><span>Checkout conversion</span><em>Pending client sign-off</em></div>
+<div class="metric"><b>— wk</b><span>Brief to launch</span><em>Pending client sign-off</em></div>
+<div class="metric"><b>—</b><span>Systems unified</span><em>Pending client sign-off</em></div></div>
+<blockquote>“…complex e-commerce integration at Blip, and deep backend systems work at Kean…”<cite>Client testimonial, June 2025 · name pending approval</cite></blockquote>
+<div style="font-size:12px;font-weight:700;background:var(--yel);padding:6px 10px;align-self:flex-start">Sample case copy: real problem / system / output and metrics from Walter before publishing</div><div class="spec2"><div><small>Problem</small>Commerce data lived outside marketing.</div><div><small>System</small>HubSpot CMS + commerce integration</div><div><small>Output</small>One record per customer</div></div></div>
+</div></section></body></html>

@@ -1,0 +1,96 @@
+Razor Profiles Design Estimate​
+Laura Pursel www.laurapursel.co​
+February 2025​
+​
+Scope of Work
+Summary: ​
+Visual design for Razor Profiles website with opportunities for additional visual exploration/brand expansion.
+Existing assets include a site map, module library, and brand guidelines. The final deliverable will include
+high-fidelity site mockups, design reviews and refinements, and development-ready assets created in
+collaboration and communication with the site developer.
+
+Services/Role: Visual and brand designer for website development​
+Hourly Rate: $90/hr​
+Estimated Timeline: 12 Weeks​
+
+
+
+Phase 1 – Discovery & Alignment (Week 1–2)
+
+    ●​   Review existing brand guidelines and identify key pieces of visual strategy to explore and/or expand
+         upon
+    ●​   Define and discuss potential key page moments, user flow points, and priority features/messaging
+    ●​   Moodboard initial visual direction concepts to present and revise for approval
+
+Deliverables: 2-3 key messaging and visual strategy exercises, 3-4 moodboard directions for overall website
+look, feel, and ideas for key features or moments​
+Estimated Hours: 10–15 hours​
+Estimated Cost: $900 – $1,350
+
+​
+Phase 2 – High-Fidelity Design (Week 3–8)
+
+Core Page Designs:
+
+    ●​   Homepage
+         ○​ hero visuals, navigation, primary call-to-action sections
+    ●​   About Us
+         ○​ company story, team section styling
+    ●​   Services Overview & Subpages
+         ○​ Digital Strategy, Website Development, CRM, etc.
+    ●​   Contact Page
+         ○​ form UI, contact details layout
+    ●​   Marketing Agencies & Other Experiences
+         ○​ visual distinctions per category
+    ●​   Privacy Policy & Terms Pages
+         ○​ minimal styling, brand-aligned typography
+Deliverables: 6 high fidelity designs with content modules from existing library and new considerations for
+additions. Annotated notes for ideas in development and design opportunities included in presenting/sharing
+documents.
+
+Estimated Hours: 55–70 hours​
+Estimated Cost: $4,950 – $6,300
+
+​
+Phase 3 – Additional Visual Exploration (Week 6–9)
+
+    ●​        UI elements exploration and review (buttons, navigation, content block consistency refinements)
+    ●​        Iconography, illustration, and art/photography sourcing, if needed
+    ●​        Identifying moments for potential animation/motion graphics and scoping development
+
+Estimated Hours: 20–30 hours​
+Estimated Cost: $1,800 – $2,700
+
+​
+Phase 4 – Design Finalization & Handoff (Week 10–12)
+
+    ●​        Reviews, refinements & consistency checks
+    ●​        Preparing development-ready assets (Figma, Sketch, Adobe XD, or required format)
+    ●​        Design QA support post-handoff (up to 5 hours)
+
+Estimated Hours: 20–25 hours​
+Estimated Cost: $1,800 – $2,250
+
+​
+
+Total Estimated Hours & Cost
+         ●​     Total Estimated Hours: 105–140 hours
+         ●​     Total Estimated Cost: $9,450 – $12,600
+
+​
+
+Notes:
+         ●​     Scope range is an overall estimate of work based off of initial discussions and understanding. The
+                scope can be discussed for timing, efficiency, priorities. Feedback, suggestions, and alternate ideas
+                may be considered and incorporated.
+         ●​     Additional requests beyond the scope outlined may require a revised estimate.
+         ●​     The blog section is noted as "post-launch" and is not included in this estimate. If needed, it can be
+                scoped separately.
+         ●​     Review times, meetings, and communications are included in this scope with the understanding of
+                keeping main delivery and efficiency at top of mind while maintaining an open and accessible stream
+                of communication back and forth.
+         ●​     All work is done in a collaborative space (Figma, Google Workspace, others as designated by client)
+                and all documents and assets belong to client exclusively after hand-off.
+         ●​     After completion of project, any usage of assets in form of case study or portfolio of freelance
+                contractor will require written approval and release of specified content/visuals from client owner.
+

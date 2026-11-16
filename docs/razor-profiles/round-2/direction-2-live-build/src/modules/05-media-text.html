@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Chivo;src:url(../fonts/Chivo-VariableFont_wght.ttf);font-weight:100 900}
+@font-face{font-family:Chivo;src:url(../fonts/Chivo-Italic-VariableFont_wght.ttf);font-weight:100 900;font-style:italic}
+@font-face{font-family:ChivoMono;src:url(../fonts/ChivoMono-VariableFont_wght.ttf);font-weight:100 900}
+:root{--g0:#121410;--g1:#1B1E18;--g2:#262A22;--line:#33382E;--txt:#EEEEE6;--mut:#A3A898;--hv:#D6DF27;--sky:#5CC6F0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;background:var(--g0);color:var(--txt);font-family:Chivo,sans-serif;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.mono{font-family:ChivoMono,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.d{font-family:Chivo;font-weight:800;letter-spacing:-.035em;line-height:.95}
+.hv{color:var(--hv)}
+.k{display:flex;align-items:center;gap:10px;color:var(--mut)}
+.k:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--hv);box-shadow:0 0 0 4px rgba(214,223,39,.18)}
+.btn{display:inline-flex;align-items:center;gap:14px;height:54px;padding:0 24px;font-weight:700;font-size:16px;border-radius:4px}
+.btn.p{background:var(--hv);color:var(--g0)}
+.btn.s{box-shadow:inset 0 0 0 1px #5A6150;color:var(--txt)}
+.btn kbd{font-family:ChivoMono;font-size:11px;padding:3px 6px;border-radius:3px;background:rgba(18,20,16,.14);font-weight:600}
+.btn.s kbd{background:var(--g2);color:var(--mut)}
+.tl{color:var(--sky);border-bottom:1px solid var(--sky);padding-bottom:2px;font-weight:600}
+header.top{height:76px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line)}
+header.top nav{display:flex;align-items:center;height:76px;gap:30px;margin-left:56px;font-size:15px;font-weight:500;color:#CFD1C6}
+header.top nav a{height:76px;display:flex;align-items:center}
+header.top nav a.on{color:var(--txt);box-shadow:inset 0 -2px 0 var(--hv)}
+header.top .rt{margin-left:auto;display:flex;align-items:center;gap:20px}
+.crumb{height:46px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line);gap:10px;color:var(--mut)}
+.crumb b{color:var(--txt);font-weight:500}
+.panel{background:var(--g1);border:1px solid var(--line);border-radius:6px}
+h2.d{font-size:72px}
+h3{font-weight:700;font-size:24px;letter-spacing:-.015em;line-height:1.15}
+.lead{font-size:20px;line-height:1.5;color:#D3D5CA}
+.mut{color:var(--mut)}
+.ok{color:var(--hv)}.run{color:var(--sky)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%}
+.spec{height:44px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line);color:var(--mut)}
+.spec .r{margin-left:auto;color:var(--txt)}
+.m{padding:84px 64px 92px;position:relative}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+.hd{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end;margin-bottom:56px}
+
+.note{position:absolute;right:-36px;bottom:-30px;width:340px;padding:20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.note b{font-size:17px;line-height:1.35}
+.steps{margin-top:26px;border-top:1px solid var(--line)}
+.steps div{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;color:var(--txt);text-transform:none;font-size:13px;letter-spacing:.02em}
+.steps span{color:var(--hv)}</style></head><body><div class="spec mono">Razor Profiles · Direction 2 — Live Build<span class="r">Module 05 / 10 — Media + text</span></div><section class="m"><div class="g12" style="align-items:center">
+<div style="grid-column:1/8;position:relative"><div class="panel" style="overflow:hidden;padding:0"><img src="../img/whiteboard.jpg" style="width:100%;height:600px;object-fit:cover;display:block;filter:contrast(1.05)"></div>
+<div class="note panel"><span class="mono k">Day 1 · 10:15</span><b>Sitemap agreed on the whiteboard. Spec draft in your inbox by tomorrow.</b></div></div>
+<div style="grid-column:9/13"><div class="mono k">Website development</div><h2 class="d" style="font-size:60px;margin-top:22px">It starts on a whiteboard,<br><span class="hv">not in a template.</span></h2>
+<p class="lead" style="margin-top:22px;font-size:18px">From the first brief to launch, one team carries the work through analysis, scope, design and build, so nothing is lost in a hand-off.</p>
+<div class="steps mono"><div><span>01</span>Briefing</div><div><span>02</span>Current &amp; competitor analysis</div><div><span>03</span>Define project scope</div><div><span>04</span>Sitemap · wireframes · design</div><div><span>05</span>Develop on HubSpot CMS</div></div>
+<div style="display:flex;gap:16px;margin-top:30px"><a class="btn p">Start a brief →</a><a class="btn s">See our work</a></div>
+<p class="mono" style="color:#7E8475;margin-top:18px">Photo: generated placeholder · replace with a real session</p></div></div></section></body></html>

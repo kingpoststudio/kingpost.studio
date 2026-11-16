@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><title></title><style>
+@font-face{font-family:Bricolage;src:url(../fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf);font-weight:200 800;font-stretch:75% 100%}
+@font-face{font-family:Instrument;src:url(../fonts/InstrumentSans-VariableFont_wdth,wght.ttf);font-weight:400 700;font-stretch:75% 100%}
+@font-face{font-family:Instrument;src:url(../fonts/InstrumentSans-Italic-VariableFont_wdth,wght.ttf);font-style:italic;font-weight:400 700}
+:root{--white:#F7F9FC;--frost:#E4EBF4;--ink:#0E1A33;--navy:#003271;--sky:#28ABE2;--yel:#D6DF27;--slate:#4A5872;--line:#C9D4E3;--cut:28px}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;background:var(--white);color:var(--ink);font-family:Instrument,sans-serif;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.d{font-family:Bricolage;font-stretch:78%;font-weight:700;letter-spacing:-.025em;line-height:.94;font-variation-settings:"opsz" 96}
+.eyebrow{font-family:Bricolage;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-stretch:90%;display:flex;align-items:center;gap:12px;color:var(--navy)}
+.eyebrow:before{content:"";width:14px;height:14px;background:var(--sky);clip-path:polygon(0 0,55% 0,100% 45%,100% 100%,0 100%)}
+.wrap{padding:0 96px}
+.cut{clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,0 100%)}
+.btn{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 30px 0 26px;font-weight:600;font-size:16px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
+.btn.p{background:var(--navy);color:#fff}
+.btn.y{background:var(--yel);color:var(--ink)}
+.btn.s{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy);clip-path:none}
+.btn .ar{font-family:Bricolage;font-size:20px;line-height:1}
+.tl{font-weight:600;color:var(--navy);border-bottom:2px solid var(--sky);padding-bottom:2px}
+header.top{height:84px;display:flex;align-items:center;padding:0 96px;background:var(--white);border-bottom:1px solid var(--line)}
+header.top nav{display:flex;align-items:center;height:84px;gap:34px;margin-left:auto;margin-right:36px;font-weight:500;font-size:15px}
+header.top nav a{height:84px;display:flex;align-items:center}header.top nav a.on{color:var(--navy);box-shadow:inset 0 -3px 0 var(--sky)}
+.crumb{height:52px;display:flex;align-items:center;padding:0 96px;font-size:13px;color:var(--slate);border-bottom:1px solid var(--line);gap:10px}
+.crumb b{color:var(--ink);font-weight:600}.crumb .r{margin-left:auto;display:flex;gap:22px}
+.crumb .r span:before{content:"";display:inline-block;width:7px;height:7px;background:var(--sky);margin-right:8px;vertical-align:1px}
+h2.d{font-size:76px}
+h3{font-family:Bricolage;font-stretch:85%;font-weight:650;font-size:28px;letter-spacing:-.015em;line-height:1.05}
+.lead{font-size:20px;line-height:1.5;color:#26324d}
+.mut{color:var(--slate)}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:6px 12px 6px 10px;background:var(--frost);color:var(--navy)}
+.chip i{width:9px;height:9px;display:block;clip-path:polygon(0 0,55% 0,100% 45%,100% 100%,0 100%)}
+.ph{border:2px dashed #8EA0BD;color:var(--slate);display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:600;letter-spacing:.04em}
+.spec{height:48px;display:flex;align-items:center;padding:0 96px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);border-bottom:1px solid var(--line);font-family:Bricolage;font-stretch:90%}
+.spec .r{margin-left:auto;color:var(--ink)}
+.m{padding:88px 96px 96px;position:relative}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+
+.ps{display:grid;grid-template-columns:repeat(5,1fr);margin-top:64px;gap:14px}
+.st{display:flex;flex-direction:column}
+.st .h{background:var(--ink);color:#fff;padding:22px 22px 20px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%);padding-left:40px;display:grid;grid-template-columns:auto 1fr;column-gap:10px}
+.st:first-child .h{clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%);padding-left:22px}
+.st .h span{font-family:Bricolage;font-weight:700;color:var(--yel);font-size:14px;grid-row:1/3;padding-top:5px}
+.st .h b{font-family:Bricolage;font-stretch:85%;font-size:24px;font-weight:700}
+.st .h em{font-style:normal;font-size:13px;color:#A9B8D2}
+.st p{font-size:14px;color:#33405c;padding:20px 6px 18px;min-height:112px}
+.st .ai,.st .hu{font-size:14px;font-weight:600;padding:16px 18px;line-height:1.4}
+.st .ai{background:var(--sky);color:var(--ink);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
+.st .hu{background:var(--navy);color:#fff;margin-top:8px}
+.st small{display:block;font-family:Bricolage;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;opacity:.8}
+.legend{display:flex;gap:28px;margin-top:28px;font-size:14px;font-weight:600;align-items:center}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:8px;vertical-align:-1px}</style></head><body style="background:var(--white)"><div class="spec">Razor Profiles · Direction 1 — Clean Cut<span class="r">Module 02 / 10 — How we build</span></div><section class="m"><div class="g12" style="align-items:end"><div style="grid-column:1/9"><div class="eyebrow">How we build</div><h2 class="d" style="margin-top:20px">AI in every step.<br><span style="color:var(--navy)">A person signs off every step.</span></h2></div>
+<p class="lead" style="grid-column:9/13">Speed comes from the machines. Accuracy and taste come from the people who decide what ships.</p></div>
+<div class="ps"><div class="st"><div class="h"><span>01</span><b>Brief</b><em>Walter</em></div><p>A conversation, not a form. Business challenge, audience, constraints, budget.</p><div class="ai"><small>AI does</small>Transcribes, structures and drafts the brief</div><div class="hu"><small>People do</small>Walter agrees it with you</div></div><div class="st"><div class="h"><span>02</span><b>Spec</b><em>You + us</em></div><p>Current &amp; competitor analysis, sitemap, scope. Signed off before anything is built.</p><div class="ai"><small>AI does</small>Drafts the sitemap and audits competitors in hours</div><div class="hu"><small>People do</small>A strategist cuts it to what matters</div></div><div class="st"><div class="h"><span>03</span><b>Design</b><em>Design</em></div><p>Wireframes, then design, built from a tested module library.</p><div class="ai"><small>AI does</small>Generates layout and copy options</div><div class="hu"><small>People do</small>A designer chooses, edits, and owns it</div></div><div class="st"><div class="h"><span>04</span><b>Build</b><em>HubSpot CMS</em></div><p>Themes, modules, CRM and commerce integrations.</p><div class="ai"><small>AI does</small>Writes and tests code alongside engineers</div><div class="hu"><small>People do</small>An engineer reviews every line</div></div><div class="st"><div class="h"><span>05</span><b>Launch</b><em>Run &amp; grow</em></div><p>QA, WCAG 2.2 AA, analytics, then campaigns and iteration.</p><div class="ai"><small>AI does</small>Checks accessibility and regressions on every release</div><div class="hu"><small>People do</small>Walter reviews results with you</div></div></div>
+<div class="legend"><span><i style="background:var(--sky)"></i>AI-accelerated</span><span><i style="background:var(--navy)"></i>Human decision</span><span style="margin-left:auto" class="mut">Example flow for a HubSpot website build. Sprints and retainers use the same five cuts.</span></div></section></body></html>

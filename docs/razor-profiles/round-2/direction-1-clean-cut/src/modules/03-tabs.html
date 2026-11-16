@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset="utf-8"><title></title><style>
+@font-face{font-family:Bricolage;src:url(../fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf);font-weight:200 800;font-stretch:75% 100%}
+@font-face{font-family:Instrument;src:url(../fonts/InstrumentSans-VariableFont_wdth,wght.ttf);font-weight:400 700;font-stretch:75% 100%}
+@font-face{font-family:Instrument;src:url(../fonts/InstrumentSans-Italic-VariableFont_wdth,wght.ttf);font-style:italic;font-weight:400 700}
+:root{--white:#F7F9FC;--frost:#E4EBF4;--ink:#0E1A33;--navy:#003271;--sky:#28ABE2;--yel:#D6DF27;--slate:#4A5872;--line:#C9D4E3;--cut:28px}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;background:var(--white);color:var(--ink);font-family:Instrument,sans-serif;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.d{font-family:Bricolage;font-stretch:78%;font-weight:700;letter-spacing:-.025em;line-height:.94;font-variation-settings:"opsz" 96}
+.eyebrow{font-family:Bricolage;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-stretch:90%;display:flex;align-items:center;gap:12px;color:var(--navy)}
+.eyebrow:before{content:"";width:14px;height:14px;background:var(--sky);clip-path:polygon(0 0,55% 0,100% 45%,100% 100%,0 100%)}
+.wrap{padding:0 96px}
+.cut{clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,0 100%)}
+.btn{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 30px 0 26px;font-weight:600;font-size:16px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
+.btn.p{background:var(--navy);color:#fff}
+.btn.y{background:var(--yel);color:var(--ink)}
+.btn.s{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy);clip-path:none}
+.btn .ar{font-family:Bricolage;font-size:20px;line-height:1}
+.tl{font-weight:600;color:var(--navy);border-bottom:2px solid var(--sky);padding-bottom:2px}
+header.top{height:84px;display:flex;align-items:center;padding:0 96px;background:var(--white);border-bottom:1px solid var(--line)}
+header.top nav{display:flex;align-items:center;height:84px;gap:34px;margin-left:auto;margin-right:36px;font-weight:500;font-size:15px}
+header.top nav a{height:84px;display:flex;align-items:center}header.top nav a.on{color:var(--navy);box-shadow:inset 0 -3px 0 var(--sky)}
+.crumb{height:52px;display:flex;align-items:center;padding:0 96px;font-size:13px;color:var(--slate);border-bottom:1px solid var(--line);gap:10px}
+.crumb b{color:var(--ink);font-weight:600}.crumb .r{margin-left:auto;display:flex;gap:22px}
+.crumb .r span:before{content:"";display:inline-block;width:7px;height:7px;background:var(--sky);margin-right:8px;vertical-align:1px}
+h2.d{font-size:76px}
+h3{font-family:Bricolage;font-stretch:85%;font-weight:650;font-size:28px;letter-spacing:-.015em;line-height:1.05}
+.lead{font-size:20px;line-height:1.5;color:#26324d}
+.mut{color:var(--slate)}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:6px 12px 6px 10px;background:var(--frost);color:var(--navy)}
+.chip i{width:9px;height:9px;display:block;clip-path:polygon(0 0,55% 0,100% 45%,100% 100%,0 100%)}
+.ph{border:2px dashed #8EA0BD;color:var(--slate);display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:600;letter-spacing:.04em}
+.spec{height:48px;display:flex;align-items:center;padding:0 96px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);border-bottom:1px solid var(--line);font-family:Bricolage;font-stretch:90%}
+.spec .r{margin-left:auto;color:var(--ink)}
+.m{padding:88px 96px 96px;position:relative}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+
+.tabs{display:flex;margin-top:52px;border-bottom:2px solid var(--ink)}
+.tabs a{padding:18px 26px;font-family:Bricolage;font-stretch:85%;font-size:20px;font-weight:650;color:var(--slate)}
+.tabs a.on{background:var(--ink);color:#fff;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%)}
+.panel{margin-top:56px}
+.kv{margin-top:28px;border-top:2px solid var(--ink)}
+.kv div{display:grid;grid-template-columns:220px 1fr;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.kv span{color:var(--slate)}</style></head><body style="background:var(--white)"><div class="spec">Razor Profiles · Direction 1 — Clean Cut<span class="r">Module 03 / 10 — Tabs</span></div><section class="m"><div class="eyebrow">Who we build for</div><h2 class="d" style="margin-top:20px">Fluent in your industry.<br><span style="color:var(--navy)">Not limited by it.</span></h2>
+<div class="tabs"><a class="on">Life sciences &amp; med device</a><a>Marketing agencies</a><a>Consumer</a><a>Non-profit</a><a>Enterprise B2B</a></div>
+<div class="g12 panel"><div style="grid-column:1/6;padding-top:8px">
+<h3 style="font-size:38px">Regulated, technical, and still easy to buy from.</h3>
+<p class="lead" style="margin-top:18px;font-size:18px">Our founder spent years in life-science commercial operations, so we speak your buyers’ language. What we bring is the same thing every client gets: a fast, accurate HubSpot build.</p>
+<div class="kv"><div><b>Indexing &amp; web search</b><span>HubSpot + Algolia for large product catalogues</span></div><div><b>Account-based marketing</b><span>For long, multi-stakeholder buying cycles</span></div><div><b>NDA-first process</b><span>Many of our clients can’t be named. That’s fine.</span></div></div>
+<div style="display:flex;gap:26px;align-items:center;margin-top:34px"><a class="btn p">Talk to Walter <span class="ar">→</span></a><a class="tl">Life sciences in detail</a></div></div>
+<div style="grid-column:7/13"><div class="cut" style="--cut:48px;height:520px;overflow:hidden"><img src="../img/cut-acrylic.jpg" style="width:100%;height:100%;object-fit:cover"></div>
+<div style="display:flex;justify-content:space-between;font-size:13px;color:var(--slate);margin-top:12px"><span>Tab 1 of 5. Industry pages share one template; imagery stays agency-framed, never lab stock.</span><span>Image: generated concept</span></div></div></div></section></body></html>

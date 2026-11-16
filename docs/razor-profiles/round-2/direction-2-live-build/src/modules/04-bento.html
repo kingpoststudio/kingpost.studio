@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Chivo;src:url(../fonts/Chivo-VariableFont_wght.ttf);font-weight:100 900}
+@font-face{font-family:Chivo;src:url(../fonts/Chivo-Italic-VariableFont_wght.ttf);font-weight:100 900;font-style:italic}
+@font-face{font-family:ChivoMono;src:url(../fonts/ChivoMono-VariableFont_wght.ttf);font-weight:100 900}
+:root{--g0:#121410;--g1:#1B1E18;--g2:#262A22;--line:#33382E;--txt:#EEEEE6;--mut:#A3A898;--hv:#D6DF27;--sky:#5CC6F0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;background:var(--g0);color:var(--txt);font-family:Chivo,sans-serif;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.mono{font-family:ChivoMono,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.d{font-family:Chivo;font-weight:800;letter-spacing:-.035em;line-height:.95}
+.hv{color:var(--hv)}
+.k{display:flex;align-items:center;gap:10px;color:var(--mut)}
+.k:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--hv);box-shadow:0 0 0 4px rgba(214,223,39,.18)}
+.btn{display:inline-flex;align-items:center;gap:14px;height:54px;padding:0 24px;font-weight:700;font-size:16px;border-radius:4px}
+.btn.p{background:var(--hv);color:var(--g0)}
+.btn.s{box-shadow:inset 0 0 0 1px #5A6150;color:var(--txt)}
+.btn kbd{font-family:ChivoMono;font-size:11px;padding:3px 6px;border-radius:3px;background:rgba(18,20,16,.14);font-weight:600}
+.btn.s kbd{background:var(--g2);color:var(--mut)}
+.tl{color:var(--sky);border-bottom:1px solid var(--sky);padding-bottom:2px;font-weight:600}
+header.top{height:76px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line)}
+header.top nav{display:flex;align-items:center;height:76px;gap:30px;margin-left:56px;font-size:15px;font-weight:500;color:#CFD1C6}
+header.top nav a{height:76px;display:flex;align-items:center}
+header.top nav a.on{color:var(--txt);box-shadow:inset 0 -2px 0 var(--hv)}
+header.top .rt{margin-left:auto;display:flex;align-items:center;gap:20px}
+.crumb{height:46px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line);gap:10px;color:var(--mut)}
+.crumb b{color:var(--txt);font-weight:500}
+.panel{background:var(--g1);border:1px solid var(--line);border-radius:6px}
+h2.d{font-size:72px}
+h3{font-weight:700;font-size:24px;letter-spacing:-.015em;line-height:1.15}
+.lead{font-size:20px;line-height:1.5;color:#D3D5CA}
+.mut{color:var(--mut)}
+.ok{color:var(--hv)}.run{color:var(--sky)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%}
+.spec{height:44px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line);color:var(--mut)}
+.spec .r{margin-left:auto;color:var(--txt)}
+.m{padding:84px 64px 92px;position:relative}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+.hd{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end;margin-bottom:56px}
+
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:280px;gap:16px}
+.b{padding:28px;display:flex;flex-direction:column;gap:14px;overflow:hidden;position:relative}
+.b h3{font-size:26px}
+.a{grid-column:1/6;grid-row:span 2}.s{grid-column:6/9}.w{grid-column:9/13;grid-row:span 2;flex-direction:column;justify-content:space-between}.t{grid-column:6/9}.dl{grid-column:1/13;grid-row:auto;height:200px;background:var(--hv);border-radius:6px;display:grid;grid-template-columns:160px 1fr 1fr;align-items:center;gap:30px}
+.diff{background:var(--g0);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin-top:10px;display:flex;flex-direction:column;gap:8px}.diff p{font-family:ChivoMono;font-size:14px}.del{color:#8A8F80;text-decoration:line-through}.add{color:var(--hv)}
+.sig{margin-top:auto;border-top:1px solid var(--line)}
+.sig div{display:grid;grid-template-columns:100px 1fr auto;padding:16px 0;border-bottom:1px solid var(--line);align-items:center}.sig span{color:var(--mut)}
+.spark{display:flex;align-items:flex-end;gap:8px;height:110px;margin-top:auto}.spark i{flex:1;background:var(--g2);border-radius:2px}.spark i:last-child{background:var(--sky)}
+.w .ring{align-self:flex-end}
+.opts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:auto;height:80px}.opts div{background:var(--g2);border-radius:3px}.opts .pick{background:transparent;box-shadow:inset 0 0 0 2px var(--hv);display:flex;align-items:flex-end;padding:6px}.opts .pick span{color:var(--hv);font-size:10px}
+.dl .k:before{background:var(--g0);box-shadow:none}</style></head><body><div class="spec mono">Razor Profiles · Direction 2 — Live Build<span class="r">Module 04 / 10 — Bento</span></div><section class="m"><div class="hd"><div style="grid-column:1/8"><div class="mono k">What we optimise for</div><h2 class="d" style="margin-top:22px">Accuracy. Speed.<br><span class=hv>Taste. Delight.</span></h2></div><p class="lead" style="grid-column:8/13">Four promises, each with a mechanism behind it rather than an adjective.</p></div>
+<div class="bento">
+<div class="b a panel"><span class="mono k">Accuracy</span><h3>Every AI output has a human owner.</h3><div class="diff"><div class="mono mut">Review · homepage hero copy</div><p class="del">− “We leverage cutting-edge AI to unlock synergies.”</p><p class="add">+ “Brief in. Build live.”</p><span class="mono mut">edited by a person · approved by you</span></div><div class="sig"><div><span class="mono">Spec</span><b>Strategist</b><i class="mono ok">✓ signed</i></div><div><span class="mono">Design</span><b>Designer</b><i class="mono ok">✓ signed</i></div><div><span class="mono">Code</span><b>Engineer</b><i class="mono ok">✓ signed</i></div><div><span class="mono">Launch</span><b>Walter</b><i class="mono ok">✓ signed</i></div></div></div>
+<div class="b s panel"><span class="mono k">Speed</span><h3>Short loops you can see.</h3><div class="spark"><i style="height:30%"></i><i style="height:45%"></i><i style="height:38%"></i><i style="height:60%"></i><i style="height:52%"></i><i style="height:70%"></i><i style="height:64%"></i><i style="height:82%"></i><i style="height:76%"></i><i style="height:90%"></i></div><p class="mono mut">Daily build updates · illustrative</p></div>
+<div class="b w panel"><div><span class="mono k">Talk to Walter</span><h3 style="font-size:30px;margin-top:14px">One point of contact,<br>brief to launch.</h3><a class="btn p" style="margin-top:22px;height:46px;font-size:14px">Book 30 minutes →</a></div><div class="ring"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34" width="200" height="200" ><defs><mask id="m1k" maskUnits="userSpaceOnUse" x="-5" y="-5" width="45" height="45"><path d="m25.85,4.9l-.19-.19C21.57.55,15.53-1,9.94.64h-.02c-1.82.54-3.53,1.38-5.05,2.53C.86,6.19-.92,11.45.46,16.27l.02.07c.33,1.1.75,2.15,1.31,3.13-.02.09-.02.21-.02.26-.02.77.07,1.52.23,2.27,3.95,15.49,25.69,11.21,27.93-3.09,0-.02.02-.02.02-.02.77-1.17,1.54-2.39,1.78-3.84.91-4.21-1.82-8.98-5.9-10.15Zm3.56,13.76l-.02.02c-7.11,9.52-19.44,9.97-26.97.94v-.05l-.02-.19c-.49-7.09,4.12-13.69,10.95-15.67,4-1.19,8.38-.65,11.98,1.47l.12.07c.14.21.3.4.44.54,3.04,3.46,4.4,8.35,3.53,12.87Z" fill="#fff"/></mask></defs><g mask="url(#m1k)"><polygon points="15.60,16.40 -42.98,29.39 -44.02,23.17 -44.40,16.88 -44.12,10.58 -43.18,4.35 -41.59,-1.75 -39.37,-7.64 -36.55,-13.28 -33.15,-18.58 -29.21,-23.50 -24.77,-27.98 -19.90,-31.97 -14.63,-35.43 -9.02,-38.31 -3.15,-40.60 2.93,-42.25 9.15,-43.25 15.45,-43.60 21.74,-43.28 27.97,-42.31 34.06,-40.69 39.94,-38.44 45.56,-35.58 50.85,-32.15 55.75,-28.19" fill="#EEEEE6"/><polygon points="15.60,16.40 55.75,-28.19 57.57,-26.48 59.32,-24.69 60.99,-22.83 62.59,-20.91 64.10,-18.92 65.53,-16.87 66.87,-14.76 68.13,-12.60 69.29,-10.38 70.36,-8.12 71.33,-5.82 72.21,-3.48 72.99,-1.10 73.67,1.30 74.25,3.73 74.72,6.19 75.10,8.66 75.37,11.14 75.54,13.64 75.60,16.14 75.56,18.64 75.41,21.13 75.16,23.62 74.81,26.10" fill="#D6DF27"/><polygon points="15.60,16.40 74.81,26.10 73.31,32.83 71.04,39.34 68.04,45.56 64.35,51.38 60.01,56.75 55.08,61.58 49.63,65.81 43.74,69.39 37.47,72.27 30.91,74.41 24.15,75.79 17.28,76.38 10.38,76.17 3.55,75.18 -3.12,73.41 -9.54,70.88 -15.62,67.64 -21.30,63.71 -26.49,59.16 -31.12,54.05 -35.13,48.44 -38.47,42.40 -41.10,36.02 -42.98,29.39" fill="#EEEEE6"/></g></svg></div></div>
+<div class="b t panel"><span class="mono k">Taste</span><h3>Senior designers make the call.</h3><div class="opts"><div></div><div></div><div class="pick"><span class="mono">chosen</span></div><div></div></div><p class="mono mut">AI proposes options · a designer picks one and refines it</p></div>
+<div class="b dl"><span class="mono k" style="color:var(--g0)">Delight</span><h3 style="color:var(--g0);font-size:34px">Details people notice, then use.</h3><p style="color:#2A2E22;font-size:15px">Micro-interactions, fast pages and forms that don’t fight you. Built to WCAG 2.2 AA so delight includes everyone.</p></div>
+</div></section></body></html>

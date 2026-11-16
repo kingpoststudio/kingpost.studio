@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Chivo;src:url(../fonts/Chivo-VariableFont_wght.ttf);font-weight:100 900}
+@font-face{font-family:Chivo;src:url(../fonts/Chivo-Italic-VariableFont_wght.ttf);font-weight:100 900;font-style:italic}
+@font-face{font-family:ChivoMono;src:url(../fonts/ChivoMono-VariableFont_wght.ttf);font-weight:100 900}
+:root{--g0:#121410;--g1:#1B1E18;--g2:#262A22;--line:#33382E;--txt:#EEEEE6;--mut:#A3A898;--hv:#D6DF27;--sky:#5CC6F0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;background:var(--g0);color:var(--txt);font-family:Chivo,sans-serif;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.mono{font-family:ChivoMono,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.d{font-family:Chivo;font-weight:800;letter-spacing:-.035em;line-height:.95}
+.hv{color:var(--hv)}
+.k{display:flex;align-items:center;gap:10px;color:var(--mut)}
+.k:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--hv);box-shadow:0 0 0 4px rgba(214,223,39,.18)}
+.btn{display:inline-flex;align-items:center;gap:14px;height:54px;padding:0 24px;font-weight:700;font-size:16px;border-radius:4px}
+.btn.p{background:var(--hv);color:var(--g0)}
+.btn.s{box-shadow:inset 0 0 0 1px #5A6150;color:var(--txt)}
+.btn kbd{font-family:ChivoMono;font-size:11px;padding:3px 6px;border-radius:3px;background:rgba(18,20,16,.14);font-weight:600}
+.btn.s kbd{background:var(--g2);color:var(--mut)}
+.tl{color:var(--sky);border-bottom:1px solid var(--sky);padding-bottom:2px;font-weight:600}
+header.top{height:76px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line)}
+header.top nav{display:flex;align-items:center;height:76px;gap:30px;margin-left:56px;font-size:15px;font-weight:500;color:#CFD1C6}
+header.top nav a{height:76px;display:flex;align-items:center}
+header.top nav a.on{color:var(--txt);box-shadow:inset 0 -2px 0 var(--hv)}
+header.top .rt{margin-left:auto;display:flex;align-items:center;gap:20px}
+.crumb{height:46px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line);gap:10px;color:var(--mut)}
+.crumb b{color:var(--txt);font-weight:500}
+.panel{background:var(--g1);border:1px solid var(--line);border-radius:6px}
+h2.d{font-size:72px}
+h3{font-weight:700;font-size:24px;letter-spacing:-.015em;line-height:1.15}
+.lead{font-size:20px;line-height:1.5;color:#D3D5CA}
+.mut{color:var(--mut)}
+.ok{color:var(--hv)}.run{color:var(--sky)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%}
+.spec{height:44px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line);color:var(--mut)}
+.spec .r{margin-left:auto;color:var(--txt)}
+.m{padding:84px 64px 92px;position:relative}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+.hd{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end;margin-bottom:56px}
+
+.svl{border-top:1px solid var(--line);width:62%}
+.sv{display:grid;grid-template-columns:230px 1fr 120px 40px;grid-template-rows:auto auto;column-gap:24px;padding:20px 16px;border-bottom:1px solid var(--line);align-items:baseline}
+.sv .path{grid-row:1/3;color:var(--mut);font-size:11.5px;padding-top:6px}
+.sv h3{font-size:26px}.sv p{grid-column:2;color:var(--mut);font-size:15px;margin-top:4px}
+.sv .tag{grid-row:1/3;grid-column:3;justify-self:start;background:var(--g2);padding:4px 8px;border-radius:3px;font-size:11px;color:#CFD1C6}
+.sv .go{grid-row:1/3;grid-column:4;font-size:22px;color:var(--mut);justify-self:end}
+.sv.on{background:var(--g1);box-shadow:inset 3px 0 0 var(--hv)}.sv.on .path{color:var(--hv)}.sv.on .go{color:var(--hv)}
+.prev{position:absolute;right:64px;top:310px;width:470px;overflow:hidden}
+.prev img{width:100%;height:270px;object-fit:cover;display:block}
+.pv{padding:22px;display:flex;flex-direction:column;gap:14px}.pv b{font-size:20px;line-height:1.3}.pv .btn{align-self:flex-start}</style></head><body><div class="spec mono">Razor Profiles · Direction 2 — Live Build<span class="r">Module 02 / 10 — Services index</span></div><section class="m"><div class="hd"><div style="grid-column:1/8"><div class="mono k">Services</div><h2 class="d" style="margin-top:22px">Six services.<br><span class=hv>One build team.</span></h2></div><p class="lead" style="grid-column:8/13">Strategy, marketing, design and development under one roof, so you never manage a hand-off between shops.</p></div>
+<div class="svl"><div class="sv on"><span class="mono path">/services/website-development</span><h3>Website development</h3><p>HubSpot CMS themes and modules, HubSpot + Algolia search, WCAG 2.2 AA.</p><span class="tag mono">HubSpot CMS</span><span class="go">→</span></div><div class="sv "><span class="mono path">/services/crm</span><h3>CRM implementation &amp; migration</h3><p>Move to HubSpot without losing a contact, a deal or a workflow.</p><span class="tag mono">Integrations</span><span class="go">↗</span></div><div class="sv "><span class="mono path">/services/e-commerce</span><h3>E-commerce &amp; integrations</h3><p>Storefronts, checkouts and the back-end systems they talk to.</p><span class="tag mono">Commerce</span><span class="go">↗</span></div><div class="sv "><span class="mono path">/services/strategy</span><h3>Digital strategy &amp; ABM</h3><p>Identify the challenge, prioritise by benefit and cost, plan it.</p><span class="tag mono">ABM</span><span class="go">↗</span></div><div class="sv "><span class="mono path">/services/campaigns</span><h3>Marketing campaigns</h3><p>Inbound and outbound programmes, automated in HubSpot.</p><span class="tag mono">Automation</span><span class="go">↗</span></div><div class="sv "><span class="mono path">/services/bespoke</span><h3>Bespoke process development</h3><p>When the off-the-shelf workflow doesn’t fit, we build the one that does.</p><span class="tag mono">Custom</span><span class="go">↗</span></div></div>
+<div class="prev panel"><img src="../img/desk.jpg"><div class="pv"><span class="mono k">Preview · Website development</span><b>From briefing to a live HubSpot theme, with one team carrying the work end to end.</b><a class="btn p" style="height:44px;font-size:14px">Explore website development →</a></div></div></section></body></html>
