@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Inter:wght@400;500&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<link rel="stylesheet" href="base.css"><script src="mob.js"></script><style>
+.acc{border-top:1px solid var(--ink)}
+.it{border-bottom:1px solid var(--rule);display:grid;grid-template-columns:64px 1fr 40px;align-items:center;padding:22px 0}
+.it .t{font-family:'Inter Tight';font-size:24px;font-weight:500}
+.pm{width:28px;height:28px;border:1px solid var(--ink);position:relative;justify-self:end}
+.pm:before,.pm:after{content:"";position:absolute;background:var(--ink);left:7px;right:7px;top:13px;height:1px}
+.pm.plus:after{transform:rotate(90deg)}
+.open{background:var(--card);margin:0 -24px;padding:22px 24px;border-bottom:1px solid var(--ink)}
+.open .t{color:var(--ink)}
+.body{grid-column:2/3;padding-top:16px}
+</style></head><body><div class="sheet">
+<div class="spec mono"><span><b>Razor Profiles</b> · Direction A — Cross-Section</span><span class="r">Module 04 / 10 — <b>Accordion</b></span></div>
+<div class="wrap"><div class="cols"></div>
+<span class="tk" style="left:40px;top:28px"></span><span class="tk" style="right:40px;top:28px"></span><span class="tk" style="left:40px;bottom:28px"></span><span class="tk" style="right:40px;bottom:28px"></span>
+
+<div class="g">
+<div style="grid-column:1/5"><div class="lab mono">04 — How we engage</div><h2 style="font-size:44px">From brief to run,<br><span>no hand-offs.</span></h2>
+<p class="small" style="margin-top:20px">The same team stays on the work from the first conversation through launch and after it.</p>
+<div style="margin-top:36px;position:relative"><svg id="m" width="100%" height="250" viewBox="0 0 420 250"></svg><div class="cap mono"><span>Fig. 06 — Step 01 of 04</span></div></div></div>
+<div style="grid-column:6/13" class="acc">
+<div class="it open"><span class="mono" style="color:var(--deep)">01</span><span class="t">Discover</span><span class="pm"></span>
+<div class="body"><p>We start with the business challenge, not the deliverable. Together we name the problem, rank options by benefit and cost, and agree what success looks like before scope is written.</p>
+<div class="rule-top" style="margin-top:22px">
+<div class="row small" style="grid-template-columns:120px 1fr"><span class="mono" style="color:var(--mute2)">You get</span><span>A written brief and an agreed scope</span></div>
+<div class="row small" style="grid-template-columns:120px 1fr"><span class="mono" style="color:var(--mute2)">Who</span><span>Walter Lentfert with the delivery team</span></div></div>
+<div style="margin-top:20px"><a class="tl">Talk to Walter about discovery →</a></div></div></div>
+<div class="it"><span class="mono" style="color:var(--mute2)">02</span><span class="t">Plan</span><span class="pm plus"></span></div>
+<div class="it"><span class="mono" style="color:var(--mute2)">03</span><span class="t">Build</span><span class="pm plus"></span></div>
+<div class="it"><span class="mono" style="color:var(--mute2)">04</span><span class="t">Run</span><span class="pm plus"></span></div>
+<div class="it"><span class="mono" style="color:var(--mute2)">FAQ</span><span class="t">Do you work alongside in-house teams?</span><span class="pm plus"></span></div>
+<div class="it"><span class="mono" style="color:var(--mute2)">FAQ</span><span class="t">Can you work under NDA?</span><span class="pm plus"></span></div>
+</div></div>
+</div></div><script>mob(document.getElementById('m'),{R:120,W:40,cx:205,cy:125,hi:[.06,.31],mark:{u:.19,off:16}});
+document.fonts.ready.then(()=>{document.title='H'+document.documentElement.scrollHeight;});</script></body></html>

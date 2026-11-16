@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Inter:wght@400;500&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<link rel="stylesheet" href="base.css"><script src="mob.js"></script><style>
+.tbl{display:grid;grid-template-columns:200px repeat(4,1fr);border-top:1px solid var(--ink)}
+.tbl>div{border-bottom:1px solid var(--rule);padding:22px 0;display:flex;align-items:center;min-height:96px}
+.tbl .h{min-height:auto;padding:12px 0;color:var(--mute)}
+.focus{outline:2px solid var(--deep);outline-offset:3px}
+.dis{background:#DCD9D2!important;color:#7d8191!important;border-color:#DCD9D2!important}
+.dis i{background:#b9b6ae!important}
+.ico{width:52px;height:52px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:18px}
+.darkband{margin:64px -128px -96px;padding:56px 128px 64px;background:var(--ink);color:var(--paper);position:relative}
+.darkband .tbl{border-top-color:rgba(241,239,234,.5)}
+.darkband .tbl>div{border-bottom-color:rgba(241,239,234,.14)}
+.darkband .h,.darkband .rl{color:rgba(241,239,234,.6)}
+.dk1{background:var(--paper);color:var(--ink)}.dk1 i{width:8px;height:8px;background:var(--yel);display:block;outline:1px solid var(--ink)}
+.dk2{border:1px solid var(--paper);color:var(--paper)}
+.dk3{color:var(--sky);padding:0;height:auto}
+.dkl{color:var(--sky);border-bottom:1px solid var(--sky);padding-bottom:3px;font-weight:500;font-size:15px}
+.dfocus{outline:2px solid var(--sky);outline-offset:3px}
+.ddis{background:#2a2e40!important;color:#7b8096!important;border-color:#2a2e40!important}
+.dico{width:52px;height:52px;border:1px solid var(--paper);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--paper)}
+.note{color:var(--mute);margin-top:18px}
+</style></head><body><div class="sheet">
+<div class="spec mono"><span><b>Razor Profiles</b> · Direction A — Cross-Section</span><span class="r">Module 03 / 10 — <b>Buttons + links</b></span></div>
+<div class="wrap"><div class="cols"></div>
+<span class="tk" style="left:40px;top:28px"></span><span class="tk" style="right:40px;top:28px"></span><span class="tk" style="left:40px;bottom:28px"></span><span class="tk" style="right:40px;bottom:28px"></span>
+
+<div class="g"><div style="grid-column:1/8"><div class="lab mono">Component sheet — Actions</div><h2>Buttons and links</h2></div>
+<div style="grid-column:9/13;align-self:end"><p class="small">Every state at 1:1. Focus rings are 2px with a 3px offset and pass 3:1 against the surface.</p></div></div>
+<div class="tbl" style="margin-top:44px">
+<div class="h mono">On paper</div><div class="h mono">Default</div><div class="h mono">Hover</div><div class="h mono">Focus (visible)</div><div class="h mono">Disabled</div>
+<div class="mono rl" style="color:var(--mute)">Primary</div>
+<div><a class="btn b1"><i></i>Talk to Walter</a></div><div><a class="btn b1" style="background:var(--deep)"><i></i>Talk to Walter</a></div><div><a class="btn b1 focus"><i></i>Talk to Walter</a></div><div><a class="btn b1 dis"><i></i>Talk to Walter</a></div>
+<div class="mono rl" style="color:var(--mute)">Secondary</div>
+<div><a class="btn b2">See our approach</a></div><div><a class="btn b2" style="background:rgba(19,22,38,.06)">See our approach</a></div><div><a class="btn b2 focus">See our approach</a></div><div><a class="btn b2 dis">See our approach</a></div>
+<div class="mono rl" style="color:var(--mute)">Tertiary</div>
+<div><a class="btn b3">Read more →</a></div><div><a class="btn b3" style="text-decoration:underline;text-underline-offset:5px">Read more &nbsp;→</a></div><div><a class="btn b3 focus">Read more →</a></div><div><a class="btn b3" style="color:#8a8e9c">Read more →</a></div>
+<div class="mono rl" style="color:var(--mute)">Icon</div>
+<div><a class="ico">→</a></div><div><a class="ico" style="background:var(--ink);color:var(--paper)">→</a></div><div><a class="ico focus">→</a></div><div><a class="ico" style="border-color:#c5c2bb;color:#a3a6b2">→</a></div>
+<div class="mono rl" style="color:var(--mute)">Text link</div>
+<div><a class="tl">Website development</a></div><div><a class="tl" style="border-bottom-width:2px;color:var(--ink);border-color:var(--ink)">Website development</a></div><div><a class="tl focus">Website development</a></div><div><a class="tl" style="color:#8a8e9c;border-color:#c5c2bb">Website development</a></div>
+</div>
+<div class="note mono">Fig. 04 — Yellow is a marker only, never text. Disabled states are exempt from contrast minimums but never carry meaning alone.</div>
+<div class="darkband"><span class="tk" style="left:40px;top:24px;filter:invert(1)"></span><span class="tk" style="right:40px;top:24px;filter:invert(1)"></span>
+<div class="tbl">
+<div class="h mono">On dark band</div><div class="h mono">Default</div><div class="h mono">Hover</div><div class="h mono">Focus (visible)</div><div class="h mono">Disabled</div>
+<div class="mono rl">Primary</div>
+<div><a class="btn dk1"><i></i>Talk to Walter</a></div><div><a class="btn dk1" style="background:#fff"><i></i>Talk to Walter</a></div><div><a class="btn dk1 dfocus"><i></i>Talk to Walter</a></div><div><a class="btn dk1 ddis"><i style="background:#555a6e;outline:none"></i>Talk to Walter</a></div>
+<div class="mono rl">Secondary</div>
+<div><a class="btn dk2">See our approach</a></div><div><a class="btn dk2" style="background:rgba(241,239,234,.1)">See our approach</a></div><div><a class="btn dk2 dfocus">See our approach</a></div><div><a class="btn dk2 ddis">See our approach</a></div>
+<div class="mono rl">Tertiary</div>
+<div><a class="btn dk3">Read more →</a></div><div><a class="btn dk3" style="text-decoration:underline;text-underline-offset:5px">Read more &nbsp;→</a></div><div><a class="btn dk3 dfocus">Read more →</a></div><div><a class="btn dk3" style="color:#5f647a">Read more →</a></div>
+<div class="mono rl">Icon</div>
+<div><a class="dico">→</a></div><div><a class="dico" style="background:var(--paper);color:var(--ink)">→</a></div><div><a class="dico dfocus">→</a></div><div><a class="dico" style="border-color:#3a3f54;color:#5f647a">→</a></div>
+<div class="mono rl">Text link</div>
+<div><a class="dkl">Website development</a></div><div><a class="dkl" style="color:var(--paper);border-color:var(--paper);border-bottom-width:2px">Website development</a></div><div><a class="dkl dfocus">Website development</a></div><div><a class="dkl" style="color:#5f647a;border-color:#3a3f54">Website development</a></div>
+</div><div class="mono" style="margin-top:18px;color:rgba(241,239,234,.6)">Fig. 05 — Sky #28ABE2 appears only on dark surfaces (6.9:1 on ink).</div></div>
+</div></div><script>
+document.fonts.ready.then(()=>{document.title='H'+document.documentElement.scrollHeight;});</script></body></html>

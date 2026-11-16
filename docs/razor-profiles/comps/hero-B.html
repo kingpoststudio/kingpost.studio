@@ -1,0 +1,93 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+:root{--base:#0D0F1A;--mid:#131626;--navy:#003271;--deep:#20386C;--white:#EAEAE9;--sky:#28ABE2;--yel:#D6DF27;--rule:rgba(234,234,233,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1600px;height:1000px;overflow:hidden;background:var(--base);color:var(--white);font-family:Geist,sans-serif}
+.mono{font-family:'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:500}
+#gl{position:absolute;left:560px;top:60px;width:1040px;height:820px}
+header{position:absolute;top:0;left:0;right:0;height:76px;display:flex;align-items:center;padding:0 112px;border-bottom:1px solid var(--rule);background:rgba(13,15,26,.92);z-index:3}
+header img{height:34px;display:block}
+nav{display:flex;gap:40px;margin-left:auto;margin-right:36px;font-size:15px;font-weight:500}
+nav a{color:var(--white);display:flex;gap:6px;align-items:center}
+nav a .c{font-size:10px;opacity:.6}
+nav a.on{color:var(--sky);box-shadow:inset 0 -2px 0 var(--sky);padding:28px 0 26px}
+.pill{display:flex;align-items:center;gap:10px;border:1px solid rgba(234,234,233,.4);padding:11px 18px;font-size:14px;font-weight:500;border-radius:999px}
+.pill b{font-weight:500}.pill span{color:var(--yel)}
+.crumbs{position:absolute;top:76px;left:0;right:0;height:46px;display:flex;align-items:center;gap:12px;padding:0 112px;border-bottom:1px solid var(--rule);color:rgba(234,234,233,.62);z-index:3}
+.crumbs b{color:var(--white);font-weight:500}.crumbs .r{margin-left:auto}
+.main{position:absolute;left:112px;top:122px;width:720px;padding-top:92px;z-index:2}
+.eyebrow{color:var(--sky);display:flex;gap:14px;align-items:center;margin-bottom:28px}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--sky)}
+h1{font-family:Philosopher;font-weight:400;font-size:88px;line-height:.98;letter-spacing:-.01em}
+.intent{margin-top:30px;font-size:19px;line-height:1.55;max-width:560px;color:rgba(234,234,233,.86)}
+.btns{margin-top:38px;display:flex;gap:30px;align-items:center}
+.b1{background:var(--white);color:var(--base);font-weight:500;font-size:15px;padding:16px 26px;display:flex;gap:12px;align-items:center}
+.b1 i{width:22px;height:2px;background:var(--base);display:block;position:relative}
+.b2{font-weight:500;font-size:15px;color:var(--white);padding-bottom:4px;border-bottom:2px solid var(--yel)}
+.faces{position:absolute;left:112px;top:752px;display:flex;gap:0;z-index:2;width:720px;border-top:1px solid var(--rule)}
+.faces div{flex:1;padding-top:14px;color:rgba(234,234,233,.5)}
+.faces div.on{color:var(--white);box-shadow:inset 0 2px 0 var(--yel)}
+.cue{position:absolute;right:112px;top:770px;color:rgba(234,234,233,.55);z-index:2;text-align:right}
+.next{position:absolute;left:112px;right:112px;top:858px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;z-index:2}
+.card{background:var(--mid);border:1px solid var(--rule);height:200px;padding:26px 28px}
+.card .mono{color:var(--sky)}
+.card h3{font-family:Geist;font-weight:500;font-size:24px;margin-top:16px;letter-spacing:-.01em}
+.card p{font-size:14px;color:rgba(234,234,233,.6);margin-top:8px}
+</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+</head><body>
+<canvas id="gl"></canvas>
+<header><img src="rp-left-light.svg" alt="Razor Profiles">
+<nav><a class="on">Capabilities <span class="c">▾</span></a><a>Work <span class="c">▾</span></a><a>Approach</a><a>About</a><a>Insights</a></nav>
+<a class="pill"><b>Talk to Walter</b><span>→</span></a></header>
+<div class="crumbs mono"><span>Home</span><span>/</span><b>Capabilities</b><span class="r">English &amp; Nederlands · Wilmington, NC</span></div>
+<div class="main">
+<div class="eyebrow mono">Capabilities · One office</div>
+<h1>One surface.<br>Every discipline.</h1>
+<p class="intent">Strategy, marketing, design and development run as one continuous practice, so your team never manages a hand-off and always has Walter on the other end.</p>
+<div class="btns"><a class="b1">Talk to Walter <i></i></a><a class="b2">Explore the four disciplines</a></div>
+</div>
+<div class="faces mono"><div class="on">01 Strategy</div><div>02 Marketing</div><div>03 Design</div><div>04 Development</div></div>
+<div class="cue mono">Scroll to turn the surface ↓</div>
+<section class="next">
+<div class="card"><div class="mono">Work</div><h3>Selected engagements</h3><p>Case studies shown with client approval</p></div>
+<div class="card"><div class="mono">Walter</div><h3>A note from Walter</h3><p>Why one office beats a roster of vendors</p></div>
+<div class="card"><div class="mono">Approach</div><h3>How we engage</h3><p>Discover, plan, build, run</p></div>
+</section>
+<script type="module">
+import * as THREE from 'three';
+const cv=document.getElementById('gl');const W=1040,H=820;
+const r=new THREE.WebGLRenderer({canvas:cv,antialias:true,preserveDrawingBuffer:true,alpha:true});
+r.setPixelRatio(2);r.setSize(W,H,false);r.shadowMap.enabled=true;r.shadowMap.type=THREE.PCFShadowMap;
+r.outputColorSpace=THREE.SRGBColorSpace;r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=.95;
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(30,W/H,.1,100);cam.position.set(0,0,11.5);
+// palette along the strip
+const stops=[[0,'#003271'],[.22,'#20386C'],[.48,'#28ABE2'],[.62,'#7DDD81'],[.8,'#D6DF27'],[.9,'#BDBA1C'],[1,'#003271']].map(([t,c])=>[t,new THREE.Color(c)]);
+function col(t){for(let i=0;i<stops.length-1;i++){const[a,ca]=stops[i],[b,cb]=stops[i+1];if(t<=b){return ca.clone().lerp(cb,(t-a)/(b-a));}}return stops[stops.length-1][1].clone();}
+const OFF=Number(new URLSearchParams(location.search).get('off')||0.25);const R=2.25,HW=.68,TH=.06,N=600;
+function frame(u){const c=new THREE.Vector3(R*Math.cos(u),R*Math.sin(u),0);
+ const rad=new THREE.Vector3(Math.cos(u),Math.sin(u),0),z=new THREE.Vector3(0,0,1);
+ const a=u/2,w=rad.clone().multiplyScalar(Math.cos(a)).add(z.clone().multiplyScalar(Math.sin(a)));
+ const n=rad.clone().multiplyScalar(-Math.sin(a)).add(z.clone().multiplyScalar(Math.cos(a)));return{c,w,n};}
+const pos=[],nor=[],cols=[],idx=[];
+function strip(fn,k=1){const base=pos.length/3;for(let i=0;i<=N;i++){const u=i/N*Math.PI*2,f=frame(u),cl=col(((i/N)+OFF)%1);
+ for(const s of [0,1]){const{p,n}=fn(f,s);pos.push(p.x,p.y,p.z);nor.push(n.x,n.y,n.z);cols.push(cl.r*k,cl.g*k,cl.b*k);}}
+ for(let i=0;i<N;i++){const a=base+i*2,b=a+1,c=a+2,d=a+3;idx.push(a,b,c,b,d,c);}}
+// top, bottom faces and two edges
+strip((f,s)=>({p:f.c.clone().addScaledVector(f.w,s?HW:-HW).addScaledVector(f.n,TH),n:f.n.clone()}));
+strip((f,s)=>({p:f.c.clone().addScaledVector(f.w,s?-HW:HW).addScaledVector(f.n,-TH),n:f.n.clone().negate()}));
+strip((f,s)=>({p:f.c.clone().addScaledVector(f.w,HW).addScaledVector(f.n,s?-TH:TH),n:f.w.clone()}),.42);
+strip((f,s)=>({p:f.c.clone().addScaledVector(f.w,-HW).addScaledVector(f.n,s?TH:-TH),n:f.w.clone().negate()}),.42);
+const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));g.setAttribute('normal',new THREE.Float32BufferAttribute(nor,3));g.setAttribute('color',new THREE.Float32BufferAttribute(cols,3));g.setIndex(idx);
+const m=new THREE.MeshPhongMaterial({vertexColors:true,specular:0x4a5666,shininess:26,side:THREE.DoubleSide});
+const mesh=new THREE.Mesh(g,m);mesh.castShadow=true;mesh.receiveShadow=!location.search.includes('nors');
+const H0=(location.hash.slice(1)||'-.85,.2,2.4').split(',').map(Number);mesh.rotation.set(H0[0],H0[1],H0[2]);mesh.position.set(.55,.1,0);scene.add(mesh);
+// one hard key light, upper left front
+const key=new THREE.DirectionalLight(0xffffff,3.9);key.position.set(...(new URLSearchParams(location.search).get('k')||'-6,5,10').split(',').map(Number));key.castShadow=true;
+key.shadow.mapSize.set(4096,4096);key.shadow.camera.left=-5;key.shadow.camera.right=5;key.shadow.camera.top=5;key.shadow.camera.bottom=-5;key.shadow.bias=-.0005;key.shadow.normalBias=.06;key.shadow.radius=1.5;scene.add(key);
+scene.add(new THREE.AmbientLight(0xffffff,.3)); // minimal fill so shadow side keeps its color
+r.render(scene,cam);document.title='done';
+</script></body></html>

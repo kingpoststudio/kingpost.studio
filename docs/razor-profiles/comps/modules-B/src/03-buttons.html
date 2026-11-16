@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<link rel="stylesheet" href="base.css"><style>
+.tbl{display:grid;grid-template-columns:200px repeat(4,1fr);border-top:1px solid rgba(234,234,233,.4)}
+.tbl>div{border-bottom:1px solid var(--rule);padding:22px 0;display:flex;align-items:center;min-height:96px}
+.tbl .h{min-height:auto;padding:12px 0;color:var(--mute)}.tbl .rl{color:var(--mute)}
+.P{background:var(--text);color:var(--base)}.P i{width:22px;height:2px;background:var(--base);display:block}
+.PH{background:#fff;box-shadow:inset 0 -2px 0 var(--yel)}
+.S{border:1px solid rgba(234,234,233,.5);color:var(--text)}.SH{background:rgba(234,234,233,.08);border-color:var(--text)}
+.PL{border:1px solid rgba(234,234,233,.4);color:var(--text)}.PLH{border-color:var(--sky);color:var(--sky)}
+.ico{width:52px;height:52px;border:1px solid rgba(234,234,233,.5);display:flex;align-items:center;justify-content:center;font-size:18px}
+.IH{background:var(--text);color:var(--base)}
+.L{color:var(--sky);border-bottom:1px solid var(--sky);padding-bottom:3px;font-weight:500;font-size:15px}.LH{border-bottom-width:2px;color:var(--text);border-color:var(--text)}
+.F{outline:2px solid var(--sky);outline-offset:3px}
+.D{background:#1f2337!important;color:#8C90A3!important;border-color:#2a2e44!important;box-shadow:none!important}.D i{background:#8C90A3!important}.D span{color:#8C90A3!important}
+.ico.D,.L.D{background:none!important}
+.lt{border-top-color:#131626}.lt>div{border-bottom-color:rgba(32,56,108,.24)}.lt .h,.lt .rl{color:#4A5068}
+.lt .P{background:var(--ink);color:var(--paper)}.lt .P i{background:var(--paper)}.lt .PH{background:var(--deep);box-shadow:inset 0 -2px 0 var(--yel)}
+.lt .S{border-color:var(--ink);color:var(--ink)}.lt .SH{background:rgba(19,22,38,.06)}
+.lt .PL{border-color:rgba(19,22,38,.5);color:var(--ink)}.lt .PL span{color:var(--deep)}.lt .PLH{border-color:var(--deep);color:var(--deep)}
+.lt .ico{border-color:var(--ink);color:var(--ink)}.lt .IH{background:var(--ink);color:var(--paper)}
+.lt .L{color:var(--deep);border-color:var(--deep)}.lt .LH{color:var(--ink);border-color:var(--ink)}
+.lt .F{outline-color:var(--deep)}
+.lt .D{background:#DCD9D2!important;color:#575C74!important;border-color:#DCD9D2!important}.lt .D i{background:#575C74!important}.lt .D span{color:#575C74!important}
+.lt .ico.D,.lt .L.D{background:none!important;border-color:#c5c2bb!important}
+</style></head><body>
+<div class="spec mono"><span><b>Razor Profiles</b> · Direction B — One Surface</span><span class="r">Module 03 / 10 — <b>Buttons + links</b></span></div>
+<section class="sec" style="padding-bottom:72px"><div class="g"><div style="grid-column:1/8"><div class="lab mono">Component sheet — Actions</div><div class="disp">Buttons and links</div></div>
+<div style="grid-column:9/13;align-self:end"><p class="small">Sky marks interaction on dark. Yellow is the one hot edge, shown on primary hover. Focus rings are 2px with a 3px offset.</p></div></div>
+<div style="margin-top:48px">
+<div class="tbl ">
+<div class="h mono">Dark (default)</div><div class="h mono">Default</div><div class="h mono">Hover</div><div class="h mono">Focus (visible)</div><div class="h mono">Disabled</div>
+<div class="mono rl">Primary</div>
+<div><a class="btn P">Talk to Walter <i></i></a></div><div><a class="btn P PH">Talk to Walter <i></i></a></div><div><a class="btn P F">Talk to Walter <i></i></a></div><div><a class="btn P D">Talk to Walter <i></i></a></div>
+<div class="mono rl">Secondary</div>
+<div><a class="btn S">See our approach</a></div><div><a class="btn S SH">See our approach</a></div><div><a class="btn S F">See our approach</a></div><div><a class="btn S D">See our approach</a></div>
+<div class="mono rl">Pill (header)</div>
+<div><a class="btn pill PL">Talk to Walter <span>→</span></a></div><div><a class="btn pill PL PLH">Talk to Walter <span>→</span></a></div><div><a class="btn pill PL F">Talk to Walter <span>→</span></a></div><div><a class="btn pill PL D">Talk to Walter <span>→</span></a></div>
+<div class="mono rl">Icon</div>
+<div><a class="ico">→</a></div><div><a class="ico IH">→</a></div><div><a class="ico F">→</a></div><div><a class="ico D">→</a></div>
+<div class="mono rl">Text link</div>
+<div><a class="L">Website development</a></div><div><a class="L LH">Website development</a></div><div><a class="L F">Website development</a></div><div><a class="L D">Website development</a></div>
+</div></div><div class="cap mono" style="margin-top:18px"><span>Fig. 04 — Dark: text #EAEAE9 15.9:1, Sky 7.3:1, muted #8C90A3 6.0:1 on base</span></div></section>
+<section class="sec light" style="padding-top:64px;padding-bottom:80px">
+<div class="tbl lt">
+<div class="h mono">Light mode — long reads</div><div class="h mono">Default</div><div class="h mono">Hover</div><div class="h mono">Focus (visible)</div><div class="h mono">Disabled</div>
+<div class="mono rl">Primary</div>
+<div><a class="btn P">Talk to Walter <i></i></a></div><div><a class="btn P PH">Talk to Walter <i></i></a></div><div><a class="btn P F">Talk to Walter <i></i></a></div><div><a class="btn P D">Talk to Walter <i></i></a></div>
+<div class="mono rl">Secondary</div>
+<div><a class="btn S">See our approach</a></div><div><a class="btn S SH">See our approach</a></div><div><a class="btn S F">See our approach</a></div><div><a class="btn S D">See our approach</a></div>
+<div class="mono rl">Pill (header)</div>
+<div><a class="btn pill PL">Talk to Walter <span>→</span></a></div><div><a class="btn pill PL PLH">Talk to Walter <span>→</span></a></div><div><a class="btn pill PL F">Talk to Walter <span>→</span></a></div><div><a class="btn pill PL D">Talk to Walter <span>→</span></a></div>
+<div class="mono rl">Icon</div>
+<div><a class="ico">→</a></div><div><a class="ico IH">→</a></div><div><a class="ico F">→</a></div><div><a class="ico D">→</a></div>
+<div class="mono rl">Text link</div>
+<div><a class="L">Website development</a></div><div><a class="L LH">Website development</a></div><div><a class="L F">Website development</a></div><div><a class="L D">Website development</a></div>
+</div><div class="cap mono" style="margin-top:18px"><span>Fig. 05 — Light mode: Sky is not used on paper; links and focus use Deep Blue #20386C (9.9:1)</span></div></section>
+<script>document.fonts.ready.then(()=>{document.title='H'+document.documentElement.scrollHeight;});</script></body></html>

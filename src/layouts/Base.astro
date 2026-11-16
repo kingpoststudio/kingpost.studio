@@ -3,17 +3,17 @@ import '../styles/global.css';
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
 }
 
-const { title, description = 'King Post Studio — bespoke web solutions.' } = Astro.props;
+const { title, description } = Astro.props;
 const pageTitle = title === 'Home' ? 'King Post Studio' : `${title} — King Post Studio`;
 
 const nav = [
-  { href: '/', label: 'Home' },
-  { href: '/portfolio', label: 'Portfolio' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'HOME' },
+  { href: '/work', label: 'WORK' },
+  { href: '/about', label: 'ABOUT' },
+  { href: '/contact', label: 'CONTACT' },
 ];
 
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -29,10 +29,21 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
     <title>{pageTitle}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="hud-grain" aria-hidden="true"></div>
+    <div class="hud-vignette" aria-hidden="true"></div>
     <div class="site">
       <header class="site-header">
         <div class="site-header__inner">
-          <a class="site-brand" href="/">King Post Studio</a>
+          <a class="site-brand" href="/" aria-label="King Post Studio">
+            <img
+              class="site-brand__logo"
+              src="/brand/kps-icon-black.svg"
+              alt="King Post Studio"
+              width="212"
+              height="340"
+            />
+          </a>
           <nav aria-label="Primary">
             <ul class="site-nav">
               {
@@ -55,13 +66,23 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
         </div>
       </header>
 
-      <main class="site-main">
+      <main id="main" class="site-main">
         <slot />
       </main>
 
       <footer class="site-footer">
         <div class="site-footer__inner">
-          <p class="muted">King Post Studio</p>
+          <p class="site-footer__brand">
+            <img
+              class="site-footer__mark"
+              src="/brand/kps-icon-black.svg"
+              alt=""
+              width="212"
+              height="340"
+            />
+            <span>King Post Studio</span>
+          </p>
+          <p class="place">Robbinsville, NC</p>
         </div>
       </footer>
     </div>

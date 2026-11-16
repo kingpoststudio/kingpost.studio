@@ -1,18 +1,17 @@
 # kingpost.studio
 
-Marketing / portfolio site for King Post Studio.
+Static site for King Post Studio.
 
-Stack: Astro + Vite + TypeScript. Plain CSS. Minimal dependencies.
+Astro 5, TypeScript, Pirata One for headings and Manrope for body/UI (brandbook stand-in for Proxima Nova), one global CSS file. No UI islands.
 
-## Pages (outline)
+## Routes
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Homepage outline |
-| `/portfolio` | Portfolio listing |
-| `/portfolio/[id]` | Portfolio detail (content collection) |
-| `/about` | Mission / about |
-| `/contact` | Contact links |
+| `/` | Home |
+| `/work` | Clients and tools |
+| `/about` | Studio |
+| `/contact` | Email and profiles — no form |
 
 ## Develop
 
@@ -28,11 +27,9 @@ bun run build
 bun run preview
 ```
 
-## Deploy
+Output is static (`dist/`).
 
-- Host on Vercel; attach domain `kingpost.studio`.
-- Static output by default (`astro build` → `dist/`).
+## Docs
 
-## Related
+Razor Profiles standing context — the dossier, decisions, and Rio's design proposals — lives in [`docs/razor-profiles/`](docs/razor-profiles/) on this branch. It is not part of the site build.
 
-`kingpoststudio.com` continues to host HubSpot API proxies and should redirect non-API traffic here.

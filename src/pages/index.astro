@@ -1,25 +1,38 @@
 ---
 import Base from '../layouts/Base.astro';
+import { services } from '../data/services.ts';
 ---
 
-<Base title="Home" description="King Post Studio — outline homepage.">
-  <section class="stack">
-    <h1 class="page-title">King Post Studio</h1>
-    <p class="page-intro muted">Bespoke web solutions. Site outline.</p>
-
-    <p>
-      This is a structural placeholder for the studio homepage. Copy, imagery, and
-      motion will come later. Use the navigation to walk the page outline.
+<Base
+  title="Home"
+  description="For CEOs, CTOs, and CMOs who want a clear process from the first conversation through launch. No handoff between shops."
+>
+  <section class="home stack">
+    <h1>One studio.</h1>
+    <p class="headline">Bespoke Web Solutions</p>
+    <p class="deck">
+      For CEOs, CTOs, and CMOs who want a clear process from the first conversation through launch.
+      No handoff between shops.
     </p>
-
+    <section class="home__services hud-box" aria-labelledby="services-heading">
+      <h2 class="hud-label" id="services-heading">SERVICES</h2>
+      <ul class="work-list">
+        {
+          services.map((item) => (
+            <li>
+              <div class="work-list__name">
+                <span class="service-mark" aria-hidden="true"></span>
+                {item.name}
+              </div>
+              <div class="work-list__notes">{item.description}</div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
     <div class="cta-row">
-      <a href="/portfolio">Portfolio</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-    </div>
-
-    <div class="placeholder">
-      Hero / brand composition — TBD
+      <a class="cta" href="/contact">Talk about a project</a>
+      <a class="link-quiet" href="/work">Work</a>
     </div>
   </section>
 </Base>

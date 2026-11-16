@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:transparent;width:1200px;height:900px;overflow:hidden}#gl{width:1200px;height:900px;display:block}</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script></head><body><canvas id="gl"></canvas><script type="module">
+import * as THREE from 'three';
+const cv=document.getElementById('gl');const W=1200,H=900;
+const r=new THREE.WebGLRenderer({canvas:cv,antialias:true,preserveDrawingBuffer:true,alpha:true});
+r.setPixelRatio(2);r.setSize(W,H,false);r.shadowMap.enabled=true;r.shadowMap.type=THREE.PCFShadowMap;
+r.outputColorSpace=THREE.SRGBColorSpace;r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=.95;
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(30,W/H,.1,100);cam.position.set(0,0,11.5);
+// palette along the strip
+const stops=[[0,'#003271'],[.22,'#20386C'],[.48,'#28ABE2'],[.62,'#7DDD81'],[.8,'#D6DF27'],[.9,'#BDBA1C'],[1,'#003271']].map(([t,c])=>[t,new THREE.Color(c)]);
+function col(t){for(let i=0;i<stops.length-1;i++){const[a,ca]=stops[i],[b,cb]=stops[i+1];if(t<=b){return ca.clone().lerp(cb,(t-a)/(b-a));}}return stops[stops.length-1][1].clone();}
+const OFF=Number(new URLSearchParams(location.search).get('off')||0.25);const R=2.25,HW=.68,TH=.06,N=600;
+function frame(u){const c=new THREE.Vector3(R*Math.cos(u),R*Math.sin(u),0);
+ const rad=new THREE.Vector3(Math.cos(u),Math.sin(u),0),z=new THREE.Vector3(0,0,1);
+ const a=u/2,w=rad.clone().multiplyScalar(Math.cos(a)).add(z.clone().multiplyScalar(Math.sin(a)));
+ const n=rad.clone().multiplyScalar(-Math.sin(a)).add(z.clone().multiplyScalar(Math.cos(a)));return{c,w,n};}
+const pos=[],nor=[],cols=[],idx=[];
+function strip(fn,k=1){const base=pos.length/3;for(let i=0;i<=N;i++){const u=i/N*Math.PI*2,f=frame(u),cl=col(((i/N)+OFF)%1);
+ for(const s of [0,1]){const{p,n}=fn(f,s);pos.push(p.x,p.y,p.z);nor.push(n.x,n.y,n.z);cols.push(cl.r*k,cl.g*k,cl.b*k);}}
+ for(let i=0;i<N;i++){const a=base+i*2,b=a+1,c=a+2,d=a+3;idx.push(a,b,c,b,d,c);}}
+// top, bottom faces and two edges
+strip((f,s)=>({p:f.c.clone().addScaledVector(f.w,s?HW:-HW).addScaledVector(f.n,TH),n:f.n.clone()}));
+strip((f,s)=>({p:f.c.clone().addScaledVector(f.w,s?-HW:HW).addScaledVector(f.n,-TH),n:f.n.clone().negate()}));
+strip((f,s)=>({p:f.c.clone().addScaledVector(f.w,HW).addScaledVector(f.n,s?-TH:TH),n:f.w.clone()}),.32);
+strip((f,s)=>({p:f.c.clone().addScaledVector(f.w,-HW).addScaledVector(f.n,s?TH:-TH),n:f.w.clone().negate()}),.32);
+const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));g.setAttribute('normal',new THREE.Float32BufferAttribute(nor,3));g.setAttribute('color',new THREE.Float32BufferAttribute(cols,3));g.setIndex(idx);
+const m=new THREE.MeshPhongMaterial({vertexColors:true,specular:0x3e4858,shininess:26,side:THREE.DoubleSide});
+const mesh=new THREE.Mesh(g,m);mesh.castShadow=true;mesh.receiveShadow=!location.search.includes('nors');
+const H0=(location.hash.slice(1)||'-.85,.2,2.4').split(',').map(Number);mesh.rotation.set(H0[0],H0[1],H0[2]);mesh.position.set(0,0,0);scene.add(mesh);
+// one hard key light, upper left front
+const key=new THREE.DirectionalLight(0xffffff,3.9);key.position.set(...(new URLSearchParams(location.search).get('k')||'-6,5,10').split(',').map(Number));key.castShadow=true;
+key.shadow.mapSize.set(4096,4096);key.shadow.camera.left=-5;key.shadow.camera.right=5;key.shadow.camera.top=5;key.shadow.camera.bottom=-5;key.shadow.bias=-.0005;key.shadow.normalBias=.06;key.shadow.radius=1.5;scene.add(key);
+scene.add(new THREE.AmbientLight(0xffffff,.3)); // minimal fill so shadow side keeps its color
+r.render(scene,cam);document.title='done';
+</script></body></html>

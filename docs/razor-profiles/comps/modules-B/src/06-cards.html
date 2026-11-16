@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<link rel="stylesheet" href="base.css"><style>
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.cd{background:var(--surf);border:1px solid var(--rule);position:relative}
+.cd .ri{height:230px;overflow:hidden;background:var(--base);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--rule)}
+.cd .ri img{width:92%}
+.cd.hov{border-color:var(--sky);transform:translateY(-8px);box-shadow:inset 0 2px 0 var(--yel),0 8px 0 rgba(0,0,0,.35)}
+.cd.hov .ri img{width:104%}
+.cd.hov:before{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:var(--yel);z-index:2}
+.callout{position:absolute;top:-38px;color:var(--sky)}
+</style></head><body>
+<div class="spec mono"><span><b>Razor Profiles</b> · Direction B — One Surface</span><span class="r">Module 06 / 10 — <b>Cards</b></span></div>
+<section class="sec"><div class="g" style="align-items:end"><div style="grid-column:1/8"><div class="lab mono">06 — Capabilities</div><div class="disp">Pick a starting point</div></div>
+<div style="grid-column:9/13"><p class="small">Every card leads into the same team. Start with the discipline closest to your problem.</p></div></div>
+<div class="cards" style="position:relative"><div class="cd"><div class="ri"><img src="rb-q0.png"></div><div style="padding:26px 28px 32px">
+<span class="mono" style="color:var(--mute2)">01</span><h3 style="font-size:28px;margin-top:10px">Strategy</h3><p class="small" style="margin-top:10px">Digital strategy and account-based planning.</p>
+<div class="rt" style="margin-top:20px"><div class="row small" style="padding:9px 0;color:var(--text)">Business challenge definition</div><div class="row small" style="padding:9px 0;color:var(--text)">Prioritization by benefit and cost</div><div class="row small" style="padding:9px 0;color:var(--text)">Implementation planning</div></div>
+<a class="sl" style="display:inline-block;margin-top:22px">Strategy →</a></div></div><div class="cd hov"><div class="ri"><img src="rb-q2.png"></div><div style="padding:26px 28px 32px">
+<span class="mono" style="color:var(--sky)">02</span><h3 style="font-size:28px;margin-top:10px">Marketing</h3><p class="small" style="margin-top:10px">Campaigns and automation tuned to the persona journey.</p>
+<div class="rt" style="margin-top:20px"><div class="row small" style="padding:9px 0;color:var(--text)">Inbound and outbound campaigns</div><div class="row small" style="padding:9px 0;color:var(--text)">Account-based marketing</div><div class="row small" style="padding:9px 0;color:var(--text)">HubSpot marketing automation</div></div>
+<a class="tl" style="display:inline-block;margin-top:22px">Marketing →</a></div></div><div class="cd"><div class="ri"><img src="rb-q3.png"></div><div style="padding:26px 28px 32px">
+<span class="mono" style="color:var(--mute2)">04</span><h3 style="font-size:28px;margin-top:10px">Development</h3><p class="small" style="margin-top:10px">HubSpot CMS, CRM and the integrations between them.</p>
+<div class="rt" style="margin-top:20px"><div class="row small" style="padding:9px 0;color:var(--text)">HubSpot CMS themes</div><div class="row small" style="padding:9px 0;color:var(--text)">CRM implementation and migration</div><div class="row small" style="padding:9px 0;color:var(--text)">Bespoke process development</div></div>
+<a class="sl" style="display:inline-block;margin-top:22px">Development →</a></div></div>
+<span class="callout mono" style="left:calc(33.33% + 24px)">Hover — lift 8px, Sky border, yellow hot edge, ribbon zooms</span></div>
+<div class="cap mono" style="margin-top:28px"><span>Fig. 08 — Card grid, 3-up (three of four disciplines). Each card shows a different face of the strip.</span><span>Default · Hover · Default</span></div></section>
+<script>document.fonts.ready.then(()=>{document.title='H'+document.documentElement.scrollHeight;});</script></body></html>

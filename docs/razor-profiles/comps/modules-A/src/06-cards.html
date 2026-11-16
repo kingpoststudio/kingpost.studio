@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Inter:wght@400;500&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<link rel="stylesheet" href="base.css"><script src="mob.js"></script><style>
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.cd{border:1px solid var(--rule);border-top:1px solid var(--ink);padding:28px 28px 32px;background:var(--paper);position:relative}
+.cd.hov{background:var(--card);border-color:var(--ink);border-top:3px solid var(--ink);transform:translateY(-6px);box-shadow:0 6px 0 rgba(19,22,38,.08)}
+.sq{width:10px;height:10px;background:var(--yel);outline:1px solid var(--ink)}
+.callout{position:absolute;top:-36px;left:50%;color:var(--deep);display:flex;align-items:center;gap:10px}
+.callout:before{content:"";width:1px;height:26px;background:var(--deep);position:absolute;left:-8px;top:10px}
+</style></head><body><div class="sheet">
+<div class="spec mono"><span><b>Razor Profiles</b> · Direction A — Cross-Section</span><span class="r">Module 06 / 10 — <b>Cards</b></span></div>
+<div class="wrap"><div class="cols"></div>
+<span class="tk" style="left:40px;top:28px"></span><span class="tk" style="right:40px;top:28px"></span><span class="tk" style="left:40px;bottom:28px"></span><span class="tk" style="right:40px;bottom:28px"></span>
+
+<div class="g" style="align-items:end"><div style="grid-column:1/8"><div class="lab mono">06 — Capabilities</div><h2>Pick a starting point</h2></div>
+<div style="grid-column:9/13"><p class="small">Every card leads into the same team. Start with the discipline closest to your problem.</p></div></div>
+<div class="cards" style="position:relative">
+<div class="cd"><div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--deep)">01</span></div>
+<svg class="cm" id="c01" width="100%" height="170" viewBox="0 0 384 170"></svg>
+<h3 style="font-size:28px">Strategy</h3><p class="small" style="margin-top:10px">Digital strategy and account-based planning.</p>
+<div class="rule-top" style="margin-top:20px"><div class="row small" style="padding:9px 0">Business challenge definition</div><div class="row small" style="padding:9px 0">Prioritization by benefit and cost</div><div class="row small" style="padding:9px 0">Implementation planning</div></div>
+<a class="tl" style="display:inline-block;margin-top:22px">Strategy →</a></div><div class="cd hov"><div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--deep)">02</span><span class="sq"></span></div>
+<svg class="cm" id="c02" width="100%" height="170" viewBox="0 0 384 170"></svg>
+<h3 style="font-size:28px">Marketing</h3><p class="small" style="margin-top:10px">Campaigns and automation tuned to the persona journey.</p>
+<div class="rule-top" style="margin-top:20px"><div class="row small" style="padding:9px 0">Inbound and outbound campaigns</div><div class="row small" style="padding:9px 0">Account-based marketing</div><div class="row small" style="padding:9px 0">HubSpot marketing automation</div></div>
+<a class="tl" style="display:inline-block;margin-top:22px">Marketing &nbsp;&nbsp;→</a></div><div class="cd"><div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--deep)">04</span></div>
+<svg class="cm" id="c04" width="100%" height="170" viewBox="0 0 384 170"></svg>
+<h3 style="font-size:28px">Development</h3><p class="small" style="margin-top:10px">HubSpot CMS, CRM and the integrations between them.</p>
+<div class="rule-top" style="margin-top:20px"><div class="row small" style="padding:9px 0">HubSpot CMS themes</div><div class="row small" style="padding:9px 0">CRM implementation and migration</div><div class="row small" style="padding:9px 0">Bespoke process development</div></div>
+<a class="tl" style="display:inline-block;margin-top:22px">Development →</a></div>
+<span class="callout mono" style="left:calc(33.33% + 40px)">Hover state — lift 6px, 3px ink cap, marker</span></div>
+<div class="cap mono" style="margin-top:28px"><span>Fig. 08 — Card grid, 3-up (three of four disciplines). Each figure highlights its quarter.</span><span>Default · Hover · Default</span></div>
+</div></div><script>[['c01',[.06,.31]],['c02',[.31,.56]],['c04',[.81,1]]].forEach(([id,h])=>mob(document.getElementById(id),{R:118,W:38,cx:192,cy:86,hi:h,n:140,tx:-1.1}));
+document.fonts.ready.then(()=>{document.title='H'+document.documentElement.scrollHeight;});</script></body></html>

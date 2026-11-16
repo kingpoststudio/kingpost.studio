@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Chivo;src:url(../fonts/Chivo-VariableFont_wght.ttf);font-weight:100 900}
+@font-face{font-family:Chivo;src:url(../fonts/Chivo-Italic-VariableFont_wght.ttf);font-weight:100 900;font-style:italic}
+@font-face{font-family:ChivoMono;src:url(../fonts/ChivoMono-VariableFont_wght.ttf);font-weight:100 900}
+:root{--g0:#121410;--g1:#1B1E18;--g2:#262A22;--line:#33382E;--txt:#EEEEE6;--mut:#A3A898;--hv:#D6DF27;--sky:#5CC6F0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;background:var(--g0);color:var(--txt);font-family:Chivo,sans-serif;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.mono{font-family:ChivoMono,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.d{font-family:Chivo;font-weight:800;letter-spacing:-.035em;line-height:.95}
+.hv{color:var(--hv)}
+.k{display:flex;align-items:center;gap:10px;color:var(--mut)}
+.k:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--hv);box-shadow:0 0 0 4px rgba(214,223,39,.18)}
+.btn{display:inline-flex;align-items:center;gap:14px;height:54px;padding:0 24px;font-weight:700;font-size:16px;border-radius:4px}
+.btn.p{background:var(--hv);color:var(--g0)}
+.btn.s{box-shadow:inset 0 0 0 1px #5A6150;color:var(--txt)}
+.btn kbd{font-family:ChivoMono;font-size:11px;padding:3px 6px;border-radius:3px;background:rgba(18,20,16,.14);font-weight:600}
+.btn.s kbd{background:var(--g2);color:var(--mut)}
+.tl{color:var(--sky);border-bottom:1px solid var(--sky);padding-bottom:2px;font-weight:600}
+header.top{height:76px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line)}
+header.top nav{display:flex;align-items:center;height:76px;gap:30px;margin-left:56px;font-size:15px;font-weight:500;color:#CFD1C6}
+header.top nav a{height:76px;display:flex;align-items:center}
+header.top nav a.on{color:var(--txt);box-shadow:inset 0 -2px 0 var(--hv)}
+header.top .rt{margin-left:auto;display:flex;align-items:center;gap:20px}
+.crumb{height:46px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line);gap:10px;color:var(--mut)}
+.crumb b{color:var(--txt);font-weight:500}
+.panel{background:var(--g1);border:1px solid var(--line);border-radius:6px}
+h2.d{font-size:72px}
+h3{font-weight:700;font-size:24px;letter-spacing:-.015em;line-height:1.15}
+.lead{font-size:20px;line-height:1.5;color:#D3D5CA}
+.mut{color:var(--mut)}
+.ok{color:var(--hv)}.run{color:var(--sky)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%}
+.spec{height:44px;display:flex;align-items:center;padding:0 64px;border-bottom:1px solid var(--line);color:var(--mut)}
+.spec .r{margin-left:auto;color:var(--txt)}
+.m{padding:84px 64px 92px;position:relative}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+.hd{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end;margin-bottom:56px}
+
+.car{display:flex;gap:16px;width:1700px}
+.ac{width:410px;flex:none;overflow:hidden}
+.th2{height:200px;position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+.th2 .mono{position:absolute;left:18px;top:16px;z-index:2;background:var(--g0);padding:3px 8px;border-radius:3px}
+.pat{position:absolute;inset:0}
+.p0{background:repeating-linear-gradient(90deg,#262A22 0 1px,transparent 1px 28px),repeating-linear-gradient(0deg,#262A22 0 1px,transparent 1px 28px);}
+.p0:after{content:"";position:absolute;left:40%;top:30%;width:120px;height:60px;background:var(--hv)}
+.p1{background:linear-gradient(#1B1E18,#1B1E18) padding-box;}
+.p1:before{content:"";position:absolute;inset:40px 30px;background:repeating-linear-gradient(0deg,#33382E 0 10px,transparent 10px 22px)}
+.p1:after{content:"";position:absolute;left:30px;right:190px;top:84px;height:10px;background:var(--sky)}
+.p2{background:radial-gradient(circle at 70% 60%,transparent 0 60px,#33382E 61px 62px,transparent 63px),radial-gradient(circle at 70% 60%,var(--hv) 0 10px,transparent 11px)}
+.p3{background:repeating-linear-gradient(135deg,#262A22 0 14px,#1B1E18 14px 28px)}
+.p3:after{content:"";position:absolute;right:40px;bottom:30px;width:80px;height:80px;border-radius:50%;background:var(--hv)}
+.ab{padding:22px;display:flex;flex-direction:column;gap:10px}.ab p{color:var(--mut);font-size:15px}.ab .tl{align-self:flex-start;margin-top:6px}</style></head><body><div class="spec mono">Razor Profiles · Direction 2 — Live Build<span class="r">Module 09 / 10 — Insights carousel</span></div><section class="m" style="overflow:hidden"><div class="hd"><div style="grid-column:1/8"><div class="mono k">Insights</div><h2 class="d" style="margin-top:22px">Notes from<br><span class=hv>the build.</span></h2></div><p class="lead" style="grid-column:8/13">Proposed launch articles. Each one documents how we actually work, not thought-leadership filler.</p></div>
+<div class="car"><div class="ac panel"><div class="th2"><span class="mono">Process</span><div class="pat p0"></div></div><div class="ab"><span class="mono mut">Process · 8 min read</span><h3>How we use AI without losing accuracy</h3><p>Where models draft, where people decide, and why every deliverable has a named owner.</p><a class="tl">Read →</a></div></div><div class="ac panel"><div class="th2"><span class="mono">CRM</span><div class="pat p1"></div></div><div class="ab"><span class="mono mut">CRM · 11 min read</span><h3>Planning a HubSpot CRM migration without losing history</h3><p>Mapping objects, owners and workflows before a single record moves.</p><a class="tl">Read →</a></div></div><div class="ac panel"><div class="th2"><span class="mono">Strategy</span><div class="pat p2"></div></div><div class="ab"><span class="mono mut">Strategy · 6 min read</span><h3>Why one team beats a roster of vendors</h3><p>The hidden cost of hand-offs between strategy, design and development shops.</p><a class="tl">Read →</a></div></div><div class="ac panel"><div class="th2"><span class="mono">E-commerce</span><div class="pat p3"></div></div><div class="ab"><span class="mono mut">E-commerce · 9 min read</span><h3>Wiring commerce into the CRM</h3><p>What changes when orders, customers and campaigns live in one system.</p><a class="tl">Read →</a></div></div></div><div style="display:flex;align-items:center;gap:20px;margin-top:28px"><div style="flex:1;height:2px;background:var(--g2)"><i style="display:block;width:38%;height:2px;background:var(--hv)"></i></div><a class="btn s" style="width:54px;justify-content:center;padding:0">←</a><a class="btn p" style="width:54px;justify-content:center;padding:0">→</a></div></section></body></html>

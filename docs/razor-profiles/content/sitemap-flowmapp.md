@@ -1,0 +1,66 @@
+# Razor Profiles — sitemap (FlowMapp)
+Source: FlowMapp public share link sent by Walter Lentfert to Laura Pursel (cc Stuart) on Feb 11, 2025 ("Thank you and documents as promised") and re-posted in Slack #razor-profiles-web on May 17, 2025 ("original direction with comments").
+URL: https://app.flowmapp.com/share/projects/ddf1660c-3284-4cd7-ab3d-d3e9aca875d6/sitemap/5aa1cbed-a951-4951-aebd-34e22bd5f9f9
+Project "Razor Profiles Project" created Nov 25, 2024; sitemap "Razor Profiles" last updated May 17, 2025 (UTC). 22 pages. Labels in [brackets] (ASAP = launch scope, After launch = phase 2).
+Captured read-only Oct 22, 2026 by loading the public share page in a headless browser. Raw page JSON: flowmapp-sitemap-raw-pages.json
+
+- **Main page** [ASAP]
+  - block: Content —   Get: Marketing management of clients (focus on Life Science and Med Device) & Marketing agency leadership To: Select RP to help define/optimize and implement their Sales and Marketing strategy By: Utilizing a wide range of skills /yrs of experience to determine and implement Strategy successfully (- what are we exhib on page - client statements/testimonials - services overview) Because: Razor Profiles provides turn key solutions that deliver Razor Sharp actionable contact profiles     
+  - **About us** [ASAP]
+    - block: Content
+    - block: UP(block)
+  - **Blog** [After launch]
+    - block: Blog List
+    - block: topic filter
+    - block: (hidden) audience filter
+  - **Contact us** [ASAP]
+    - block: Contact —  form 
+    - block: Block —  Support and reach 
+    - block: Contact 04
+  - **Services** [ASAP]
+    - block: General Intro of services and target organizations —  General services offered and target personae 
+    - block: Digital Strategy / ABM
+    - block: Website Development /Marketing Campaigns
+    - block: CRM implementation/Bespoke process development
+    - **Digital strategy**
+      - block: Identify business challenge(s)
+      - block: Prioritize based on benefit to Org and cost
+      - block: Implementation plan
+    - **Website development**
+      - block: Briefing
+      - block: Current & Competitor analysis
+      - block: Define project scope
+      - block: Sitemap/WF/Design
+      - block: Develop
+      - block: Hubspot themes designers
+      - block: Hubspot-Algolia Search
+    - **Account Based Marketing implementation**
+      - block: Content
+      - block: intergration svs
+    - **Marketing Campaigns**
+      - block: Inbound/outbound
+    - **CRM implementation/migration**
+      - block: Content
+      - block: Integration svs
+    - **Bespoke process development**
+      - block: Content
+  - **HubSpot partner  & service provider** [ASAP]
+  - **Partnerships**
+    - block: Strivenn —  Content strategy with intention - focus on the Persona Journey   Scientific content creation with assistance of "AI with humanity"   Account Based Marketing strategy & execution 
+  - **Life sciences/Medical device focus** [ASAP]
+    - block: Content
+    - **Medical device /LS services**
+      - block: Content
+      - **Indexing and web search**
+  - **Marketing Agencies** [ASAP]
+    - block: Content
+    - **Agency services**
+      - block: Content
+    - **Product**
+  - **Other Experiences** [ASAP]
+    - block: Consumer
+    - block: Non-Profit
+  - **Privacy policy**
+    - block: Content
+  - **Terms and conditions**
+    - block: Content
